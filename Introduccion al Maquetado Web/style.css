@@ -48,5 +48,51 @@ asi que me sobreescribe el color*/
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.block div{
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	display: block;
+}
+.inline div{
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	display: inline;
+}
+.inline-block div {
+	width: 200px;
+	height: 200px;
+	background-color: pink;
+	display: inline-block;
+	text-align: center;
+}
+
+.flex-box{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	font-family: Verdana;
+}
+.flex-box div{
+	width: 200px;
+	height: 200px;
+	padding: 70px 0;
+	background-color: #09285e;
+}
+
+.nav {
+    background-color: #3461af; 
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
 }
