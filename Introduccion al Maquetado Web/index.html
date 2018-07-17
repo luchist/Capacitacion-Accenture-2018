@@ -5,64 +5,10 @@
 
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style type="text/css">
-
-body {
-	background-color: #a1b1cc
-}
-		
-.lista {
-	color: red;
-	font-size: 30px;
-	font-family: Verdana;
-	background-color: violet;
-}
-
-.cuadrado {
-	height: 200px;
-	width: 200px;
-	background-color: green;
-	color: white;
-
-/*	margin-left: 50px;
-	margin-top: 100px;
-	margin-right: 60px;
-	margin-bottom: 90px;*/
-	margin: 100px 60px;
-
-/*
-	padding-left: 50px;
-	padding-top: 100px;
-	padding-right: 60px;
-	padding-bottom: 90px;*/
-	padding: 100px 60px;
-
-	border: 4px dashed black;
-
-
-}
-
-/* los ID tienen mayor jerarquia que las clases,
-asi que me sobreescribe el color*/
-#cuadrado {
-	background-color: violet;
-}
-
-#mainlogo {
-	height: 200px;
-	width: 200px;
-}
-
-.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-	</style>
+	<link rel="stylesheet" href="style.css">
 
 </head>
+
 
 <body>
 	<!-- comentario -->
@@ -200,6 +146,27 @@ asi que me sobreescribe el color*/
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 	consequat.
 	</p>
+
+	<form action="#" method="GET">
+
+		<label for="texto"> Texto</label>
+		<input type="text" name="" id="texto">
+		<br>
+		<label for="numero"> numero </label>
+		<input type="number" name="" id="numero">
+		<br>
+		<label for="email"> email </label>
+		<input type="email" name="" id="email">
+		<br>
+		<label for="checkbox"> checkbox </label>
+		<input type="checkbox" name="" id="checkbox">
+		<br>
+		<label for="radio"> radio </label>
+		<input type="radio" name="" id="radio">
+		<br>
+		<input type="submit" name="" value="boton">
+
+	</form>
 
 </body>
 </html>
