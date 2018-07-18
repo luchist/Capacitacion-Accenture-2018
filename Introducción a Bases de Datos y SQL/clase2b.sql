@@ -78,5 +78,3 @@ contacto c left join contactotarjetacredito ctc
 on c.idcontacto = ctc.idcontacto
 left join tarjetacredito tc #el join con la tercera tabla
 on ctc.idtarjetacredito = tc.idtarjetacredito where primernombre like '%av%';
-
-## VISTAS
