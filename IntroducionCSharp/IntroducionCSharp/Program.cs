@@ -12,6 +12,8 @@ namespace IntroducionCSharp
         {
             Console.WriteLine("Hello Worldsdsadasdasd");
             Console.ReadKey();
+
+            List<string> nombres;
         }
     }
 }

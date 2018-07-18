@@ -1,0 +1,6 @@
+C:\Users\educacionit\Desktop\IntroducionCSharp\VariablesString\bin\Debug\VariablesString.exe.config
+C:\Users\educacionit\Desktop\IntroducionCSharp\VariablesString\bin\Debug\VariablesString.exe
+C:\Users\educacionit\Desktop\IntroducionCSharp\VariablesString\bin\Debug\VariablesString.pdb
+C:\Users\educacionit\Desktop\IntroducionCSharp\VariablesString\obj\Debug\VariablesString.exe
+C:\Users\educacionit\Desktop\IntroducionCSharp\VariablesString\obj\Debug\VariablesString.pdb
+C:\Users\educacionit\Desktop\IntroducionCSharp\VariablesString\obj\Debug\VariablesString.csprojResolveAssemblyReference.cache
