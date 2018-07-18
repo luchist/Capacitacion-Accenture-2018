@@ -1,0 +1,6 @@
+C:\Users\educacionit\Desktop\IntroducionCSharp\IntroducionCSharp\bin\Debug\IntroducionCSharp.exe.config
+C:\Users\educacionit\Desktop\IntroducionCSharp\IntroducionCSharp\bin\Debug\IntroducionCSharp.exe
+C:\Users\educacionit\Desktop\IntroducionCSharp\IntroducionCSharp\bin\Debug\IntroducionCSharp.pdb
+C:\Users\educacionit\Desktop\IntroducionCSharp\IntroducionCSharp\obj\Debug\IntroducionCSharp.csprojResolveAssemblyReference.cache
+C:\Users\educacionit\Desktop\IntroducionCSharp\IntroducionCSharp\obj\Debug\IntroducionCSharp.exe
+C:\Users\educacionit\Desktop\IntroducionCSharp\IntroducionCSharp\obj\Debug\IntroducionCSharp.pdb
