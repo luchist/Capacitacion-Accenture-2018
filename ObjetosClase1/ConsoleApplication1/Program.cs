@@ -11,7 +11,11 @@ namespace DecisionSimple
         static void Main(string[] args)
         {
             //WhileEjercicio();
-            WhileEjercicioProfe();
+            //WhileEjercicioProfe();
+            Ejercicio2();
+            Ejercicio4();
+            Ejercicio6();
+            Ejercicio7();
         }
 
         static void ControlIF()
@@ -48,8 +52,6 @@ namespace DecisionSimple
             int nota1;
             int nota2;
             int nota3;
-
-            
 
             Console.WriteLine("Ingresa tus tres notas: ");
 
@@ -159,6 +161,150 @@ namespace DecisionSimple
             }
             Console.WriteLine("El valor de a quedo en {0}", a);
             Console.ReadKey();
+        }
+
+        /*
+         * EJERCICIOS LABORATORIO 3
+         * 
+         * */
+
+        //EJERCICIO 2: Imprimir numeros del 1 al 10 salteando de a 2 uno abajo del otro
+        static void Ejercicio2()
+        {
+            /*
+             * Pseudocodigo
+             * 
+             * 1 Variable entera
+             * 
+             * while ... <= 10
+             * {
+             *      incremento en 2     //ojo el orden
+             *      mostrar
+             * }
+             * 
+             * 1, 3 , 5 , 7 ,9
+             * 
+             * */
+            int x = 1;
+            while (x <= 10)
+            {
+                Console.WriteLine(x);
+                x += 2;
+            }
+            Console.ReadKey();
+        }
+
+        //EJERCICIO 4: Imprimir numeros del 1 al 10 sin imprimir numeros 2, 5 y 9 uno abajo del otro
+        static void Ejercicio4()
+        {
+            /*
+             * Pseudocodigo
+             * 
+             * 1 Variable entera
+             * 
+             * while ... <= 10
+             * {
+             *      si (nro no es 2 ni 5 ni 9)
+             *      {
+             *          mostrar
+             *      }
+             * }
+             * 
+             * */
+            int x = 1;
+            while (x <= 10)
+            {
+                switch (x)
+                {
+                    case 2:
+                        break;
+
+                    case 5:
+                        break;
+
+                    case 9:
+                        break;
+
+                    default:
+                        Console.WriteLine(x);
+                        break;
+                }
+                x++;
+            }
+            Console.ReadKey();
+        }
+
+        //EJERCICIO 6: Imprimir la suma de los numeros del 1 al 10
+        static void Ejercicio6()
+        {
+            /*
+             * Pseudocodigo
+             * 
+             *  1 Variable para el numero
+             *  1 Variable para ir sumando
+             *  while .. <= 10
+             *  {
+             *      AcumuloElNumero
+             *      IncrementoEnUno
+             *  }
+             *  
+             *  Mostrar()
+             *  
+             * */
+
+            int x = 1;
+            int total = 0;
+
+            while (x <= 10)
+            {
+                total = total + x;
+                x++;
+            }
+            Console.WriteLine(total);
+            Console.ReadKey();
+
+
+        }
+
+        //EJERCICIO 7: Imprimir la suma de los numeros pares del 1 al 25 
+        static void Ejercicio7()
+        {
+            /*
+             * Pseudocodigo
+             * 
+             * 1 Variable para el numero
+             * 1 Variable para ir sumando
+             *  while ... < 25   //25 no es par
+             *  {
+             *      si el numero es par
+             *      {
+             *          sumar //acumular
+             *      }
+             *      Incrementa en 1
+             *      
+             *  }
+             *  Mostrar la suma;
+             * 
+             * */
+
+            int x = 1;
+            int total = 0;
+
+            while (x < 25)
+            {
+                if (esPar(x))
+                {
+                    total = total + x;
+                }
+                x++;
+            }
+            Console.WriteLine(total);
+            Console.ReadKey();
+        }
+
+        static bool esPar(int x)
+        {
+            return (x % 2 == 0);
         }
 
     }
