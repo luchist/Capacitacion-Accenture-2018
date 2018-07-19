@@ -10,7 +10,7 @@ namespace CicloFor
     {
         static void Main(string[] args)
         {
-            ForAnidado();
+            ForHorrible();
         }
 
         /*
@@ -42,6 +42,15 @@ namespace CicloFor
                 {
                     Console.WriteLine("externo: {0} interno: {1}", externo, interno);
                 }
+            }
+            Console.ReadKey();
+        }
+
+        static void ForHorrible()
+        {
+            for (int a=1, b=10; a <= b; a++, b--, Console.WriteLine("---"))
+            {
+                Console.WriteLine("a tiene:" + a + " b tiene: " + b);
             }
             Console.ReadKey();
         }
