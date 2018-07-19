@@ -132,16 +132,21 @@ namespace Arreglos
              * 
              */
 
-            int max = 0;
-            int min = 300;
+            //VARIANTE: lo primero que ingresa es el maximo/minimo
 
             Console.WriteLine("Ingrese un numero:");
             Console.WriteLine("+--------------------+");
             int nro = Convert.ToInt32(Console.ReadLine());
+
+            int max = nro;
+            int min = nro;
+
+            
+            //int nro = Convert.ToInt32(Console.ReadLine()); //int.Parse(Console.ReadLine());
             while (nro != 99)
             {
                 if(nro > max)
-                { max = nro; }
+                { max = nro; } //en estos casos no son necesarias las llaves
 
                 if(nro < min)
                 { min = nro; }
@@ -151,11 +156,17 @@ namespace Arreglos
                 nro = Convert.ToInt32(Console.ReadLine());
             }
 
-            Console.WriteLine("El maximo numero ingresado fue: " + max);
-            Console.WriteLine("El minimo numero ingresado fue: " + min);
-            Console.WriteLine("+--------------------------------------+");
-            Console.ReadLine();
-
+            //pregunto si maximo != minimo
+            if (max != TOPE && min != TOPE)
+            {
+                Console.WriteLine("El maximo numero ingresado fue: " + max);
+                Console.WriteLine("El minimo numero ingresado fue: " + min);
+                Console.WriteLine("+--------------------------------------+");
+            }
+            else
+            {
+                Console.WriteLine("No se ingresaron valores");
+            }
         }
     }
 }
