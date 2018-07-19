@@ -10,7 +10,8 @@ namespace DecisionSimple
     {
         static void Main(string[] args)
         {
-            While();
+            //WhileEjercicio();
+            WhileEjercicioProfe();
         }
 
         static void ControlIF()
@@ -108,7 +109,11 @@ namespace DecisionSimple
         static void While()
         {
             int a = 1;
-            while(a <= 5) //tambien a<6 (bueno) o a!=6 (feo!)
+
+            //Una mejora conceptual
+            const int TOPE = 5;
+
+            while(a <= TOPE) //tambien a<6 (bueno) o a!=6 (feo!)
             {
                 Console.WriteLine(a);
                 a = a + 1; //a++
@@ -116,6 +121,46 @@ namespace DecisionSimple
             Console.WriteLine("El valor de a quedo en {0}", a);
             Console.ReadKey();
         }
+
+        static void WhileEjercicio()
+        /*
+         * 
+         * EJERCICIO: Hacer un bucle similar al anterior
+         * pero en orden DESCENDENTE
+         * 
+         * */
+        {
+            int a = 5;
+
+            while (a > 0)
+            {
+                Console.WriteLine(a);
+                a--; //a++
+            }
+            Console.WriteLine("El valor de a quedo en {0}", a);
+            Console.ReadKey();
+        }
+
+        static void WhileEjercicioProfe()
+        /*
+         * 
+         * EJERCICIO: Hacer un bucle similar al anterior
+         * pero en orden DESCENDENTE
+         * 
+         * */
+        {
+            int a = 5;
+            const int TOPE = 1; //si es 0, va mayor en la condicion; sino >=
+
+            while (a >= TOPE)
+            {
+                Console.WriteLine(a);
+                a--; //a++
+            }
+            Console.WriteLine("El valor de a quedo en {0}", a);
+            Console.ReadKey();
+        }
+
     }
 
 }
