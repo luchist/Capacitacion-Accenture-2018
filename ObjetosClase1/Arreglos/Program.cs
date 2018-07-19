@@ -10,7 +10,7 @@ namespace Arreglos
     {
         static void Main(string[] args)
         {
-            EjercicioArrays();
+            EjercicioBonusWhile();
         }
 
         static void Arrays()
@@ -107,6 +107,55 @@ namespace Arreglos
             }
 
             Console.ReadKey();
+        }
+
+        /*
+         * Ejercicio Bonus Laboratorio 3 
+         *
+         */
+        static void EjercicioBonusWhile()
+        {
+            /*
+             * Pseudocodigo 
+             * 
+             * Nro para leer el valor ingresado
+             * MAX inicializado en 0 para buscar el maximo
+             * MIN inicializada en 300
+             * 
+             * While (no es 99)
+             * 
+             * Nro > Max -> Nuevo maximo
+             *      Max = Nro
+             * 
+             * Nro < Min -> Nuevo Minimo
+             *      Min = Nro
+             * 
+             */
+
+            int max = 0;
+            int min = 300;
+
+            Console.WriteLine("Ingrese un numero:");
+            Console.WriteLine("+--------------------+");
+            int nro = Convert.ToInt32(Console.ReadLine());
+            while (nro != 99)
+            {
+                if(nro > max)
+                { max = nro; }
+
+                if(nro < min)
+                { min = nro; }
+
+                Console.WriteLine("Ingrese un numero:");
+                Console.WriteLine("+--------------------+");
+                nro = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("El maximo numero ingresado fue: " + max);
+            Console.WriteLine("El minimo numero ingresado fue: " + min);
+            Console.WriteLine("+--------------------------------------+");
+            Console.ReadLine();
+
         }
     }
 }

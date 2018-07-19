@@ -3,3 +3,4 @@ c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\Arreglo
 c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\Arreglos\bin\Debug\Arreglos.pdb
 c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\Arreglos\obj\Debug\Arreglos.exe
 c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\Arreglos\obj\Debug\Arreglos.pdb
+c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\Arreglos\obj\Debug\Arreglos.csprojResolveAssemblyReference.cache
