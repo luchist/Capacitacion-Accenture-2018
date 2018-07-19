@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionSimple", "ConsoleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CicloFor", "CicloFor\CicloFor.csproj", "{9FF3D3E8-E4FB-4BF9-A631-24628388388A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arreglos", "Arreglos\Arreglos.csproj", "{FC8F093C-E42C-4DA0-84CE-8D693868613C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9FF3D3E8-E4FB-4BF9-A631-24628388388A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FF3D3E8-E4FB-4BF9-A631-24628388388A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FF3D3E8-E4FB-4BF9-A631-24628388388A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8F093C-E42C-4DA0-84CE-8D693868613C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8F093C-E42C-4DA0-84CE-8D693868613C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8F093C-E42C-4DA0-84CE-8D693868613C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8F093C-E42C-4DA0-84CE-8D693868613C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
