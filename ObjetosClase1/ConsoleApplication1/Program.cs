@@ -12,9 +12,9 @@ namespace DecisionSimple
         {
             //WhileEjercicio();
             //WhileEjercicioProfe();
-            Ejercicio2();
+            /*Ejercicio2();
             Ejercicio4();
-            Ejercicio6();
+            Ejercicio6();*/
             Ejercicio7();
         }
 

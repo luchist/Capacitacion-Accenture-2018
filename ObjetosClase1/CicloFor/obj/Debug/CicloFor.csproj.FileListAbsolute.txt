@@ -1,0 +1,5 @@
+c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\CicloFor\bin\Debug\CicloFor.exe.config
+c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\CicloFor\bin\Debug\CicloFor.exe
+c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\CicloFor\bin\Debug\CicloFor.pdb
+c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\CicloFor\obj\Debug\CicloFor.exe
+c:\Users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\CicloFor\obj\Debug\CicloFor.pdb

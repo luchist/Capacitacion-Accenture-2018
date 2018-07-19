@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjetosClase1", "ObjetosCla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionSimple", "ConsoleApplication1\DecisionSimple.csproj", "{BAC955F1-EA5C-4ACA-8526-43E3609E72E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CicloFor", "CicloFor\CicloFor.csproj", "{9FF3D3E8-E4FB-4BF9-A631-24628388388A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BAC955F1-EA5C-4ACA-8526-43E3609E72E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAC955F1-EA5C-4ACA-8526-43E3609E72E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAC955F1-EA5C-4ACA-8526-43E3609E72E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FF3D3E8-E4FB-4BF9-A631-24628388388A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF3D3E8-E4FB-4BF9-A631-24628388388A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF3D3E8-E4FB-4BF9-A631-24628388388A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF3D3E8-E4FB-4BF9-A631-24628388388A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
