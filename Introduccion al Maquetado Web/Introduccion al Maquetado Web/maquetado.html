@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+/*REPASO DE FLEXBOX*/
+.menu{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10%;
+}
+.lista{
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+.lista li{
+	margin-left: 20px;
+	font-size: 24px;
+	border: 1px solid #CCC;
+	padding: 8px 16px;
+	color: white;
+	background-color: #88F7E6;
+}
+.lista li:hover{
+	background-color: #4FE5CD;
+	color: white;
+}
+.logo{
+	width: 15%;
+}
+.logo img{
+	width: 100%;
+}
+.fondo{
+	background-image: url("img/fondo.jpg");
+	background-size: 50px;
+	/*background-repeat: */
+}
+</style>
+
+</head>
+
+<body>
+	<nav class="menu">
+		<img src="img/logo.png" class="logo">
+		<ul class="lista">
+			<li>Link</li>
+			<li>Link</li>
+			<li>Link</li>
+			<li>Link</li>
+		</ul>
+	</nav>
+	<h1 class="titulo">Titulo</h1>
+	<p class="sub">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+
+</body>

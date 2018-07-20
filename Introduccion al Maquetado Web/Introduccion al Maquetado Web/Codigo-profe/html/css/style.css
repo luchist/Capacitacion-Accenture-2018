@@ -1,0 +1,140 @@
+.lista{
+	color: red;
+	font-size: 30px;
+	font-family: Verdana;
+	background-color: blue;
+}
+
+.cuadrado{
+	height: 200px;
+	width: 200px;
+	background-color: green;
+	color: red;
+/*	margin-left: 50px;
+	margin-top: 100px;
+	margin-right: 60px;
+	margin-bottom: 90px;*/
+	/*margin: 100px 60px;*/
+
+	/*padding-left: 50px;
+	padding-top: 100px;
+	padding-right: 60px;
+	padding-bottom: 90px;*/
+	padding: 100px 60px/* 90px 50px*/;
+
+	border: 3px dotted black;
+}
+.otra{
+	background-color: violet;
+}
+
+.block div{
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	display: block;
+}
+.inline div{
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	display: inline;
+}
+.inline-block div{
+	width: 200px;
+	height: 200px;
+	background-color: pink;
+	display: inline-block;
+}
+.flex-box{
+	display: flex;
+	justify-content: flex-end;
+/*	flex-wrap: wrap;
+*/	flex-direction: column-reverse;
+height: 100000px;
+}
+.flex-box div{
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}
+
+
+.fondo{
+	height: 400px;
+	background-image: url("../img/fondo.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.a{
+	counter-reset: contador;
+}
+p{
+	counter-increment: contador;
+
+}
+
+p:last-child{
+	color: red;
+}
+p:first-child{
+	color: blue;
+}
+p:nth-child(2){
+	color: green;
+}
+p::first-letter{
+	color: violet;
+}
+p::last-letter{
+	color: green;
+}
+
+p:before{
+	content: "hola ";
+}
+p:after{
+	content: " chau" counter(contador);
+}
+
+/*Overflow*/
+
+.overflow{
+	width: 200px;
+	height: 200px;
+	overflow: auto;
+	resize: both;
+}
+
+/*Float*/
+
+.todosFlotan1{
+	width: 300px;
+	height: 300px;
+	background-color: green;
+	float: left;
+}
+.todosFlotan2{
+	width: 300px;
+	height: 300px;
+	background-color: blue;
+	float: left;
+}
+.todosFlotan3{
+	width: 300px;
+	height: 300px;
+	background-color: red;
+	float: left;
+}
+.noFloto{
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+	clear: both;
+}
+.otraImagen{
+	float: right;
+}

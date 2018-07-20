@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> ~TAMBLER~ </title>
+	<link rel="icon" type="image/png" href="https://www.shareicon.net/data/128x128/2017/06/13/887046_face_512x512.png">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<style type="text/css">
+/*REPASO DE FLEXBOX*/
+.menu{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10%;
+}
+.titulo{
+	text-align: center;
+	/*margin-top: 150px;*/
+	font-size: 50px;
+	color: #C2FFF9;
+}
+.lista{
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+.lista li{
+	margin-left: 20px;
+	font-size: 24px;
+	border: 1px solid #CCC;
+	padding: 8px 16px;
+	color: #00C3A4;
+	background-color: #0C0C0C;
+}
+.lista li:hover{
+	background-color: #D88820;
+	color: #00C3A4;
+}
+.logo{
+	width: 15%;
+}
+.logo img{
+	width: 100%;
+	min-width: 50px;
+}
+/* Fondos */
+.fondo{
+	background-image: url("http://cs-laennec.fr/wp-content/uploads/2015/10/Cute-Halloween-Backgrounds-01.png");
+	background-size: 350px;
+	/* background-repeat: no repeat */
+	/* background-size: cover  te estira la imagen */
+	/* background-color: #C2FFF9;*/
+	/* background-blend-mode: overlay; efectos estilo fotoshop */
+	/* gradiente de colores, no puede ser una inagen debe ser un color
+	background-image: linear-gradient(to right, blue 50%, red 90%);*/
+	
+	font-family: Consolas;
+}
+.bloque{
+	display: flex;
+	text-align: left;
+	font-size: 18px;
+	font-family: Fira Code;
+	color: #C2FFF9;
+	padding: 0 10%;
+}
+.bloque p{
+	border-style: dashed;
+	border-color: white;
+	margin-right: 3%;
+}
+.body{
+	margin:0;
+}
+.actividad{
+	display: flex;
+}
+.texto{
+	width:80%;
+	display: flex;
+	flex-wrap: wrap;
+}
+. texto h1{
+	width: 100%;
+}
+.iconos{
+	width:20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /*eje horizontal*/
+	justify-content: center; /*se alinean en en elje vertical*/
+}
+.iconos i{
+	font-size: 50px;
+	margin: 15px;
+}
+.code {
+    font-size: 16;
+    font-family: Fira Code;
+}
+.up{
+	text-align: center;
+	font-size: 38px;
+	color: #FFB14C;
+}
+.fa-chevron-circle-up:hover{
+	color: #D88820;
+}
+.href{
+	color: #C2FFF9;
+}
+
+/* AFTER Y BEFORE
+No se suele usar mucho pero puede servir para arreglar webs viejas
+Poner contenido de texto de forma dinamica
+*/
+.afterBefore li:after{
+	content: "chau";
+}
+
+.afterBefore li:before{
+	content: "hola" counter(miContador);
+}
+
+li{
+	counter-increment: miContador;
+	/*cada vez que se lea un li se va a incrementar miContador*/
+	/*uso before para mostrar el contador*/
+}
+
+/* colores formularios*/
+input[type="text"]{
+	background-color: red;
+}
+input[type$=ail]{
+	background-color: blue; /* los que terminan con ail*/
+}
+input [type^=num]{
+	background-color: yellow; /* los que empiezan con num*/
+}
+input [type*=rc]{
+	background-color: green; /* que este en cualquier lugar */
+}
+input::placeholder{
+	color: grey;
+	font-size:18px;
+}
+
+/* mi forms*/
+.miform{
+	display: block;
+	justify-content: space-between;
+	padding: 0 10%;
+	color: white;
+}
+
+
+.miform input{
+	display: block;
+}
+
+</style>
+
+</head>
+
+<body class="fondo">
+
+	<nav class="menu">
+
+		<div class="logo">
+			<img src="https://images.vexels.com/media/users/3/135945/isolated/preview/e9cf4666511d1ad0e2c6ef55fdea2c8d-fire-pot-halloween-icon-by-vexels.png">
+		</div>
+
+		<ul class="lista">
+			<li>
+				<i class="fas fa-cog fa-spin"></i>
+			</li>
+			<li>Login</li>
+			<li>SignUp</li>
+			<li>Random</li>
+			<li>Link</li>
+		</ul>
+	</nav>
+
+	<h1 class="titulo"> ~Tumblr un poroto al lado mio~ </h1>
+
+	<div class="bloque">
+
+	<p class="iconos">
+		<i class="fab fa-instagram fa-spin" onclick="alert('COMPARTISTE VIA INSTAGRAM')"></i>
+
+		<i class="fab fa-facebook-square fa-spin" onclick="alert('COMPARTISTE VIA FACEBOOK')"></i>
+
+  		<i class="fab fa-twitter-square fa-spin" onclick="alert('COMPARTISTE VIA TWITTER')"></i>
+
+  		<i class="fas fa-sync fa-spin" onclick=location.reload();></i>
+	</p>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum impedit minus consectetur ad cupiditate accusamus fugiat esse ab eum. Nihil omnis accusantium tempora suscipit voluptas. Illum inventore aut laudantium quam.
+	</p>
+
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa assumenda aperiam itaque nulla animi quam, iusto, eligendi vero expedita deserunt sunt omnis tempore nisi modi dicta excepturi ipsum fugit, velit?
+	</p>
+
+	<p>
+	let deck = {
+    suits: ["hearts", "spades", "clubs", "diamonds"],
+    cards: Array(52),
+    createCardPicker: function() {
+        // NOTE: the line below is now an arrow function, allowing us to capture 'this' right here
+        return () => {
+            	let pickedCard = Math.floor(Math.random() * 52);
+            	let pickedSuit = Math.floor(pickedCard / 13);
+
+            	return {suit: this.suits[pickedSuit], card: pickedCard % 13};
+        	}
+    	}
+	}
+
+	let cardPicker = deck.createCardPicker();
+	let pickedCard = cardPicker();
+
+	alert("card: " + pickedCard.card + " of " + pickedCard.suit);
+	</p>
+
+	</div>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<br>
+
+	<!-- listas para practicar before y after -->
+	<ul class="afterBefore">
+		<li> Lista </li>
+		<li> Lista </li>
+		<li> Lista </li>
+		<li> Lista </li>
+	</ul>
+
+	<!-- Formularios -->
+
+	<div class="miform">
+
+	<!-- en action le decimos a que documento vamos a llegar -->
+	<form action="" method="POST">
+
+	<label for="texto"> Usuario </label>
+
+	<!-- le decimos que un campo es required, sino lo completamos nos da un
+	mensaje de error cuando le damos al boton de submit -->
+	<input type="text" name="" id="texto" placeholder="pone tu nombre!" required >
+
+	<label for="texto"> Email </label>
+	<!-- con value le damos un valor por defecto, no un placeholder sino
+	un valor real -->
+	<input type="email" name="" value="asd@gmail.com">
+
+	<label for="texto"> Numero </label>
+	<input type="number" name="">
+
+	<label for="texto"> Suscribirse? </label>
+	<input type="checkbox" name="">
+
+	<label for="texto"> Buscar </label>
+	<input type="search" name="">
+	<input type="submit" name="" value="BOTON">
+
+	</form>
+
+	</div>
+
+
+	<!-- ir al cielo -->
+	<div class="up">
+		<a href="#">
+			<i class="fas fa-chevron-circle-up"></i>
+		</a>
+	</div>
+</body>
