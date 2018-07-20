@@ -1,134 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
-
-
 <body>
-	<!-- comentario -->
+
+<div>
+	<div class="todosFlotan1"></div>
+	<div class="todosFlotan2"></div>
+	<div class="todosFlotan3"></div>
+	<div class="noFloto"></div>
+</div>
+
+<div>
+	<img src="img/logo.png" class="otraImagen"></img>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class="overflow">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor</p>
+	<div class="a"></div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor</p>
+</div>
+
+
+
+
+
+
+
+	<!-- Comentario -->
 	<header>
-
-
-		<div class="flex-container">
-
-		<div>
-			<img id="mainlogo" src="http://getdrawings.com/images/cool-logo-drawing-17.png">
-		</div>
-
+		<form action="#" method="GET">
+			<label for="texto">Texto</label>
+			<input type="text" name="" id="texto">
+			<br>
+			<label for="numero">numero</label>
+			<input type="number" name="" id="numero">
+			<br>
+			<label for="email">email</label>
+			<input type="email" name="" id="email">
+			<br>
+			<label for="checkbox">checkbox</label>
+			<input type="checkbox" name="" id="checkbox">
+			<br>
+			<label for="radio">radio</label>
+			<input type="radio" name="" id="radio">
+			<br>
+			<input type="submit" name="" value="boton">
+		</form>
 		<div class="cuadrado">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
-			</p>
+			<p>parrafo</p>
 		</div>
-		<div class="cuadrado" id="cuadrado">
-			<p>
-				Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div>
+		<div class="cuadrado otra" id="cuadrado">
 
 		</div>
-
-		<div class="flex-container">
-
-		<div class="cuadrado">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
-			</p>
-		</div>
-
-		<ul class="lista">
-			<li> <a href="https://alumni.education/accounts/dashboard">elemento de lista</a> </li>
-			<li> elemento de lista </li>
-			<li> elemento de lista </li>
-			<li> elemento de lista </li>
-		</ul>
-
-		<div class="cuadrado" id="cuadrado">
-			<p>
-				Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div>
-
-		</div>
-		
-		<ul class="lista">
-			<li> <a href="https://alumni.education/accounts/dashboard">elemento de lista</a> </li>
-			<li> elemento de lista </li>
-			<li> elemento de lista </li>
-			<li> elemento de lista </li>
-		</ul>
-		<!-- diferenciamos los elementos html -->
-		<!-- clases vs ID: las clases se pueden repetir, los ID no -->
-		<ol class="lista">
-			<li> primer elemento </li>
-			<li> elemento de lista </li>
-			<li> elemento de lista </li>
-			<li> elemento de lista </li>
-		</ol>
-		<h1>
-			titulo
-		</h1>
-		<h2>subtitulo</h2>
-
+		<nav>
+			<img src="img/logo.png">
+			<ul>
+				<li><a href="https://alumni.educacionit.com/accounts/dashboard">elemento de lista</a></li>
+				<li>elemento de lista</li>
+				<li>elemento de lista</li>
+				<li>elemento de lista</li>
+			</ul>
+			<ol id="lista" class="lista">
+				<li>elemento de lista</li>
+				<li>elemento de lista</li>
+				<li>elemento de lista</li>
+				<li>elemento de lista</li>
+			</ol>
+		</nav>
+		<h1>titulo</h1>
+		<h2></h2>
+		<h3></h3>
+		<h4></h4>
+		<h5></h5>
+		<h6></h6>
 	</header>
-
-	<!-- Los section separan semanticamente -->
 	<section>
-		<!-- El div es un contenedor que no tiene peso semantico -->
 		<div>
-			<h2> Titulo2 </h2>
-			<p> Otro parrafo </p>
+
+			<h2>Titulo2</h2>
+			<p>Otro parrafo</p>
 		</div>
 		<div>
-			<h2> Titulo2 </h2>
-			<p> Otro parrafo </p>
+			<h2>Titulo2</h2>
+			<p>Otro parrafo</p>
 		</div>
 	</section>
-
 	<section>
 		<img src="">
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+		<p class="lista">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <a href="https://www.google.com.ar/search?q=minim&oq=minim&aqs=chrome..69i57j0l5.1171j0j7&sourceid=chrome&ie=UTF-8">minim</a> veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</section>
-
-	<!-- Los article se estructuran con header, section y footer
-	y necesitan un contexto -->
 	<section>
 		<article>
 			<header></header>
 			<section>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				<figure>
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg9wZvz3LUmadvsxkSxluIx3aZGAarZNPmEIegBOyj_LVVCwVbeQ">
+					<img src="img/logo.png">
 					<figcaption>explicacion de la imagen</figcaption>
 				</figure>
 			</section>
 			<footer></footer>
 		</article>
 	</section>
-
-	<footer>
+	<footer><div class="fondo"></div>
 		<address>
 			<p>informacion</p>
 			<p>informacion</p>
@@ -139,34 +150,39 @@
 			<p>informacion</p>
 			<p>informacion</p>
 		</address>
+		<address>info</address>
 	</footer>
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.
-	</p>
+	consequat.</p>
 
-	<form action="#" method="GET">
+	<section>
+		<div class="block">
+			<div>hola</div>
+			<div>hola</div>
+			<div>hola</div>
+		</div>
+		<div class="inline">
+			<div>hola</div>
+			<div>hola</div>
+			<div>hola</div>
+		</div>
+		<div class="inline-block">
+			<div>hola</div><div>hola</div><div>hola</div>
+		</div>
+		<div class="flex-box">
+			<div>hola1</div>
+			<div>hola2</div>
+			<div>hola3</div>
+			<div>hola4</div>
+			<div>hola5</div>
+		</div>
 
-		<label for="texto"> Texto</label>
-		<input type="text" name="" id="texto">
-		<br>
-		<label for="numero"> numero </label>
-		<input type="number" name="" id="numero">
-		<br>
-		<label for="email"> email </label>
-		<input type="email" name="" id="email">
-		<br>
-		<label for="checkbox"> checkbox </label>
-		<input type="checkbox" name="" id="checkbox">
-		<br>
-		<label for="radio"> radio </label>
-		<input type="radio" name="" id="radio">
-		<br>
-		<input type="submit" name="" value="boton">
 
-	</form>
+	</section>
 
+	
 </body>
 </html>
