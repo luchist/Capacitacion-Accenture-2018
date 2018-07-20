@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Viva Peron!!</title>
+	<link rel="icon" type="image/png" href="http://moziru.com/images/vaporwave-clipart-windows-95-7.gif">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#rastrear").click(function(){
+				$("poke").append("Poke \n");
+			});
+		});
+	</script>
+
+	<style type="text/css">
+.fab
+{
+	font-size: 35px;
+}
+.fondo
+{
+	border: 1px solid black;
+	height: 600px;
+	background: url(img/peron.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/*width: 100%;*/
+}
+.peron
+{
+	position: 100px;
+}
+
+.gafas
+{
+	display: flex;
+}
+.gafas:hover {
+    transform: translatey(163px);
+    transition-duration: 2000ms;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+nav
+{
+	background-color: #bada55;
+}
+
+.jumbotron{
+	font-family: 'Roboto Mono', monospace;
+	background: black;
+}
+
+.jumbotron p{
+	border: dashed;
+    border-color: green;
+    /*border-style: solid;*/
+    padding: 10px;
+}
+
+.transform{
+	margin: 20px;
+    -webkit-transition: color 3s; /* For Safari 3.0 to 6.0 */
+    transition: color 3s; /* For modern browsers */
+}
+
+.transform:hover{
+	color: violet;
+	border-color: black;
+}
+
+#botones{
+	text-align: center;
+	border-color: black;
+}
+
+.mirow{
+	justify-content: space-around;
+}
+
+#pez{
+	font-size: 50px;
+	text-align: center;
+	justify-content: center;
+}
+
+
+	</style>
+</head>
+<body>
+	
+	<header class="container">
+		<nav class="navbar navbar-expand-lg navbar-primary bg-dark">
+		  <a class="navbar-brand" href="#"><i class="fab fa-angellist"></i></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Quienes somos</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Unirse</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link disabled" href="#">Donaciones</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+	</header>
+
+	<section class="container">
+		<div class="row fondo">
+			<div class="col">
+				<img class="peron fa-spin" src="img/peron2.jpg">
+			</div>
+			<div class="col">
+				<img class="gafas" src="img/gafas.png">
+			</div>
+			<div class="col">
+				<img class="peron fa-spin" src="img/peron2.jpg">
+			</div>
+		</div>
+	</section>
+
+	<div class="jumbotron">
+		<h1 class="display-4 transform"> <i class="fas fa-kiwi-bird fa-spin transform"></i> Hello, world!</h1>
+		
+		<div class="row mirow">
+			
+			<p class="lead transform col-sm-3">
+				This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+			</p>
+
+			<p class="lead transform col-sm-3" id="pez">
+				<i class="fas fa-fish"></i>
+				<poke></poke>
+			</p>
+
+			<p class="transform col-sm-3">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+		</div>
+
+		<p class="botones lead transform" id="botones">
+			<button type="button" class="btn btn-success">Volver</button>
+			<button type="button" class="btn btn-danger" id="rastrear">  Rastrear <span class="badge badge-light"> 8 </span> </button>
+			<button type="button" class="btn btn-info"><i class="fas fa-frog fa-pulse"></i></button>
+		</p>
+	</div>
+
+	<footer class="container flex">
+		<div class="row ">
+			<div class="col-6">
+				<i class="fab fa-facebook-square text-primary"> Facebook </i>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
