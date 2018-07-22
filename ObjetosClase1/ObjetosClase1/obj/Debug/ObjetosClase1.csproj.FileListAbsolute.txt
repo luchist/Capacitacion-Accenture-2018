@@ -1,6 +1,0 @@
-c:\users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\ObjetosClase1\bin\Debug\ObjetosClase1.exe.config
-c:\users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\ObjetosClase1\bin\Debug\ObjetosClase1.exe
-c:\users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\ObjetosClase1\bin\Debug\ObjetosClase1.pdb
-c:\users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\ObjetosClase1\obj\Debug\ObjetosClase1.csprojResolveAssemblyReference.cache
-c:\users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\ObjetosClase1\obj\Debug\ObjetosClase1.exe
-c:\users\educacionit\documents\visual studio 2015\Projects\ObjetosClase1\ObjetosClase1\obj\Debug\ObjetosClase1.pdb

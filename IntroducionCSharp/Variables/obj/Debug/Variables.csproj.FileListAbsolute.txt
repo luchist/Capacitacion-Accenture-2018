@@ -1,5 +1,0 @@
-C:\Users\educacionit\Desktop\IntroducionCSharp\Variables\bin\Debug\Variables.exe.config
-C:\Users\educacionit\Desktop\IntroducionCSharp\Variables\bin\Debug\Variables.exe
-C:\Users\educacionit\Desktop\IntroducionCSharp\Variables\bin\Debug\Variables.pdb
-C:\Users\educacionit\Desktop\IntroducionCSharp\Variables\obj\Debug\Variables.exe
-C:\Users\educacionit\Desktop\IntroducionCSharp\Variables\obj\Debug\Variables.pdb
