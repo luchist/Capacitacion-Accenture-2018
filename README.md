@@ -3,9 +3,28 @@
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/luchist/Capacitacion-Accenture-2018)
 
 
-
-
-
-
 # Capacitacion-Accenture-2018
-Cosas de la capacitación
+Cosas de la capacitación.
+
+
+## Maquetado Web
+
+* [CSS-Tricks (https://css-tricks.com/)](https://css-tricks.com/)
+* [Font Awesome (https://fontawesome.com/) ](https://fontawesome.com/)
+* [Material Design (https://material.io/design/)](https://material.io/design/)
+* [Materialize CSS (https://materializecss.com/)](https://materializecss.com/)
+* [Material-UI (https://material-ui.com/)](https://material-ui.com/)
+* [Bootstrap (https://getbootstrap.com/)](https://getbootstrap.com/)
+
+
+## Introduccion a las Bases de Datos y SQL
+
+* [XAMPP (https://www.apachefriends.org/es/index.html)](https://www.apachefriends.org/es/index.html)
+* [MySQL Workbench (https://www.mysql.com/products/workbench/)](https://www.mysql.com/products/workbench/)
+
+
+## Introduccion a la Programacion con C# .Net
+
+* [Visual Studio (https://visualstudio.microsoft.com/es/downloads/)](https://visualstudio.microsoft.com/es/downloads/)
+
+
