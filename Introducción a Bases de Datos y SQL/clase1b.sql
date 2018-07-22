@@ -28,12 +28,12 @@ insert into articulos values
 (0002,'guaymallen',10,10000),
 (0003,'havanna',60,3000),
 (0004,'asdasd',100,99999),
-(0005,'capitan',12,200),
+(0005,'capitan del espacio',12,200),
 (0006,'fantoche',20,3000),
 (0007,'comun',200,2000),
 (0008,'blancoynegro',25,2000),
 (0009,'maicena',16,500),
-(0010,'otro',8,100);
+(0010,'inju',8,100);
 
 select * from articulos;
 
