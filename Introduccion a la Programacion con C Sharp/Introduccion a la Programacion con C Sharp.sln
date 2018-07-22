@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Introduccion a la Programacion con C Sharp", "Introduccion a la Programacion con C Sharp\Introduccion a la Programacion con C Sharp.csproj", "{238E021B-2F5F-44A8-B42E-306B7D959B41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "Introduccion a la Programacion con C Sharp\HelloWorld.csproj", "{238E021B-2F5F-44A8-B42E-306B7D959B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "Variables\Variables.csproj", "{C1AA55BD-E2B9-49A0-B6AE-A4A3C2C819CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariablesString", "VariablesString\VariablesString.csproj", "{A13827AA-5B56-4D2C-B926-07111BB32B74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{59328DF8-278B-485D-B026-1046D8BC1292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLoop", "ForLoop\ForLoop.csproj", "{CFCF4002-D545-478A-BA71-40EEB394312C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlIfSwitchWhile", "ControlIfSwitchWhile\ControlIfSwitchWhile.csproj", "{0683B2F8-0736-496E-946E-1B7C175F7620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariablesAsignacion", "VariablesAsignacion\VariablesAsignacion.csproj", "{B5191913-10BA-46EC-923A-9C328E20E944}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{238E021B-2F5F-44A8-B42E-306B7D959B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{238E021B-2F5F-44A8-B42E-306B7D959B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{238E021B-2F5F-44A8-B42E-306B7D959B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1AA55BD-E2B9-49A0-B6AE-A4A3C2C819CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1AA55BD-E2B9-49A0-B6AE-A4A3C2C819CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1AA55BD-E2B9-49A0-B6AE-A4A3C2C819CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1AA55BD-E2B9-49A0-B6AE-A4A3C2C819CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13827AA-5B56-4D2C-B926-07111BB32B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13827AA-5B56-4D2C-B926-07111BB32B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13827AA-5B56-4D2C-B926-07111BB32B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13827AA-5B56-4D2C-B926-07111BB32B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59328DF8-278B-485D-B026-1046D8BC1292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59328DF8-278B-485D-B026-1046D8BC1292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59328DF8-278B-485D-B026-1046D8BC1292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59328DF8-278B-485D-B026-1046D8BC1292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFCF4002-D545-478A-BA71-40EEB394312C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFCF4002-D545-478A-BA71-40EEB394312C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFCF4002-D545-478A-BA71-40EEB394312C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFCF4002-D545-478A-BA71-40EEB394312C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0683B2F8-0736-496E-946E-1B7C175F7620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0683B2F8-0736-496E-946E-1B7C175F7620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0683B2F8-0736-496E-946E-1B7C175F7620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0683B2F8-0736-496E-946E-1B7C175F7620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5191913-10BA-46EC-923A-9C328E20E944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5191913-10BA-46EC-923A-9C328E20E944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5191913-10BA-46EC-923A-9C328E20E944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5191913-10BA-46EC-923A-9C328E20E944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
