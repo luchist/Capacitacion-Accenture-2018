@@ -123,6 +123,7 @@ console.log(asientos)
 //var boton = document.querySelector('#boton');
 
 
+//botones para liberar / reservar todo
 botonliberar.onclick=function () {
     console.log("aprete el boton para liberar todos los asientos!")
     for (var i = 0; i < cont; i++) {
@@ -140,11 +141,11 @@ botonreservar.onclick=function () {
 }
 
 
-/*
+/* no funca esto!! hay que usar addEventListener
 for (var i = 0; i < libres.length; i++) {
     libres[i].onclick=function(){
         console.log("aprete un asiento libre!")
-        asientos[i].style.backgroundColor ="red"
+        asientos[i].style.backgroundColor ="red" //aca no puedo hacer referencia a cada asiento individual
     }
 }
 */
