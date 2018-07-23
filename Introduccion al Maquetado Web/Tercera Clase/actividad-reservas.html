@@ -108,11 +108,27 @@
         Reservar todos
     </button>
 
+    <button id="botoninfolibres">
+        Ver asientos libres
+    </button>
+
+
+    <div id="consolapadre">
+        
+        <div id="console">
+            Consola: <br>
+        </div>
+
+    </div>
+
    
 
 </body>
 
 <script type="text/javascript" >
+
+//consola pkmn
+let consola = document.querySelector('#console')
 
 var asientos = document.querySelectorAll(".sala div");
 var cont = asientos.length
@@ -138,6 +154,19 @@ botonreservar.onclick=function () {
         asientos[i].classList.remove('libre')
         asientos[i].className = 'reservado'
     }
+}
+
+//boton que muestra los asientos libres
+botoninfolibres.onclick=function () {
+    console.log("aprete el boton para ver informacion!")
+    let libres = 0;
+    for (var i = 0; i < cont; i++) {
+        if (asientos[i].classList.contains('libre')){
+            libres++
+        }
+    }
+    console.log("HAY " + libres + " asientos libres!");
+    consola.innerText += '> HAY ' + libres + ' asientos libres!\n'
 }
 
 
