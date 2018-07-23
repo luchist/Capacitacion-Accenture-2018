@@ -150,23 +150,27 @@ for (var i = 0; i < libres.length; i++) {
 */
 
 //solucion del profe
-for (var i = 0; i < 12; i++) {
+for (var i = 0; i < cont; i++) {
     let asiento = asientos[i]
     asiento.addEventListener("click", color)
-    console.log("agregue listener a un asiento")
+    console.log("agregué listener a un asiento")
     console.log(asiento[i])
     function color(){
         //si esta ocupado lo libero
         console.log("clickee un asiento!!!")
         console.log(this)
 
+        //preguntas si pertenece a la clase reservado
         if (asiento.classList.contains('reservado')){
             console.log("cambie color a un asiento rojo -> verde")
+            //hago el cambio de clase
             asiento.classList.remove('reservado')
             asiento.className = 'libre'
 
+        //sino, pregunta si pertenece a la clase libre
         } else if (asiento.classList.contains('libre')){
             console.log("cambie color a un asiento verde -> rojo")
+            //hago el cambio de clase
             asiento.classList.remove('libre')
             asiento.className = 'reservado'
         }
