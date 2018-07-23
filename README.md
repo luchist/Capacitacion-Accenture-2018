@@ -2,6 +2,7 @@
 [![HitCount](http://hits.dwyl.io/luchist/Capacitacion-Accenture-2018.svg)](http://hits.dwyl.io/luchist/Capacitacion-Accenture-2018)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/luchist/Capacitacion-Accenture-2018/issues)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/https/luchist.github.io/Capacitacion-Accenture-2018.svg)](https://luchist.github.io/Capacitacion-Accenture-2018/)
+[![GitHub followers](https://img.shields.io/github/followers/luchist.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/luchist?tab=followers)
 
 
 
