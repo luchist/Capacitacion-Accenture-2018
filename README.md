@@ -10,6 +10,7 @@
 # Capacitacion-Accenture-2018
 Cosas de la capacitación.
 
+---
 
 ## [Maquetado Web](/Introduccion%20al%20Maquetado%20Web)
 
@@ -21,12 +22,14 @@ Cosas de la capacitación.
 > * [Material-UI (https://material-ui.com/)](https://material-ui.com/)
 > * [Bootstrap (https://getbootstrap.com/)](https://getbootstrap.com/)
 
+---
 
 ## [Introduccion a las Bases de Datos y SQL](/Introducción%20a%20Bases%20de%20Datos%20y%20SQL)
 
 > * [XAMPP (https://www.apachefriends.org/es/index.html)](https://www.apachefriends.org/es/index.html)
 > * [MySQL Workbench (https://www.mysql.com/products/workbench/)](https://www.mysql.com/products/workbench/)
 
+---
 
 ## [Introduccion a la Programacion con C# .Net](/Introduccion%20a%20la%20Programacion%20con%20C%20Sharp)
 
