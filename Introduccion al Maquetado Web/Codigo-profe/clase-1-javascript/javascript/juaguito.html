@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+.arena{
+	height: 90vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.arena div{
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 110px;
+	font-size: 60px;
+}
+#bueno{
+	background-color: blue;
+}
+#malo{
+ background-color: red;
+}
+
+	</style>
+</head>
+<body>
+	<div class="arena">
+		<div id="bueno"></div>
+		<div id="malo"></div>
+	</div>
+	<form>
+		<input type="text" id="input">
+		<input type="submit" id="submit">
+	</form>
+</body>
+<script type="text/javascript">
+let buenoEl = document.querySelector("#bueno") 
+let maloEl = document.querySelector("#malo")
+let submit = document.querySelector("#submit")
+let form = document.querySelector("form")
+let input = document.querySelector("#input")
+let bueno = [100, 10, "0,0,255,", 1]
+let malo = [100,10, "255,0,0,", 1]
+
+form.addEventListener("submit",function(e){
+	e.preventDefault()
+	bueno[0] = input.value
+	buenoEl.innerText = bueno[0]
+	maloEl.innerText = malo[0]
+})
+
+
+buenoEl.onclick=function(){
+	pegar(malo,bueno,maloEl)
+}
+maloEl.onclick=function(){
+	pegar(bueno,malo,buenoEl)
+}
+
+function pegar(personaje,personaje2,elemento) {
+	personaje[0] -= personaje2[1]
+	elemento.innerText=personaje[0]
+	personaje[3] -=0.1
+	elemento.style.backgroundColor= "rgba("+personaje[2]+personaje[3]+")"
+	if (personaje[0] <= 0) {
+		elemento.innerText="estoy morido"
+		buenoEl.onclick=null
+		maloEl.onclick=null
+	}
+}
+
+var a =[1]
+funcion(a)
+function funcion(b){
+	b[0]++
+}
+console.log(a)
+
+
+</script>
+</html>

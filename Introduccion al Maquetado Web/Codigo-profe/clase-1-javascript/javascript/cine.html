@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+.verde{
+	background-color: green;
+}
+.transparente{
+	background-color: transparent;
+}
+.reservado{
+	background-color: red;
+}
+.sala{
+	display: flex;
+	justify-content: space-around;
+}
+.sala div{
+	width: 75px;
+	height: 75px;
+	border: 1px solid black;
+}
+	</style>
+</head>
+<body>
+<div class="sala">
+	<div class="asiento transparente">Asiento1</div>
+	<div class="reservado">Asiento2</div>
+	<div class="reservado">Asiento3</div>
+	<div class="asiento transparente">Asiento4</div>
+	<div class="asiento transparente">Asiento5</div>
+	<div class="asiento transparente">Asiento6</div>
+	<div class="asiento transparente">Asiento7</div>
+</div>
+<button id="boton">BOTON</button>
+</body>
+<script type="text/javascript">
+let asientos = document.querySelectorAll(".asiento")
+let cont = asientos.length
+for (var i = 0; i < cont; i++) {
+	let asiento = asientos[i]
+	asiento.addEventListener("click",color)
+	function color(){
+		if (this.classList.contains("transparente")){
+			this.classList.remove("transparente")
+			this.classList.add("verde")
+		}else{
+			this.classList.remove("verde")
+			this.classList.add("transparente")
+		}
+	}
+}
+
+let boton = document.querySelector("#boton")
+boton.addEventListener("click",function(){
+	let seleccionados = document.querySelectorAll(".verde")
+	let cuantos = seleccionados.length
+	for (var i = 0; i < cuantos; i++) {
+		console.log(seleccionados[i].innerText)
+	}
+})
+
+</script>
+</html>
