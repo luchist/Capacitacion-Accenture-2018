@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Actividad - Cuadrados </title>
+    <link rel="icon" type="image/png" href="https://vignette.wikia.nocookie.net/fantendo/images/f/fa/SSB_Pok%C3%A9mon_Classic.png/revision/latest?cb=20160327201140">
+    <style type="text/css">
+
+    @font-face {
+        font-family: "Pokemon GB";
+        src: url("Pokemon GB.ttf");
+    }
+
+    .bloquecontainer{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+        font-family: Consolas;
+        padding: 0 10%;
+    }
+
+    .bloque div{
+        border-style: dashed;
+        margin: 50px;
+    }
+
+    #pika{
+        width: 150px;
+        height: 150px;
+        background-color: yellow;
+        color: brown;
+        font-weight: bolder;
+        margin: 50px;
+    }
+
+    #nido{
+        width: 150px;
+        height: 150px;
+        background-color: purple;
+        color:black;
+        font-weight: bolder;
+        margin: 50px;
+    }
+
+    .body{
+        margin:0;
+    }
+
+    #console{
+        font-family: Pokemon GB;
+        font-size: 11px;
+        color:green;
+        background-color: black;
+        width: 500px;
+        border-style: dotted;
+        border-color: grey;
+    }
+
+    #consolapadre{
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <header>
+        <div class="bloquecontainer">
+
+            <div id="pika"> 
+                Pikachu  <br> HP: 
+                    <p id="pikachuvida">
+                        100
+                    </p>
+            </div>
+
+            <div id="nido">
+                Nidoran  <br> HP: <p id="nidoranvida"> 100 <p>
+            </div>
+
+        </div>
+    </header>
+
+    <form>
+        <input type="text" id="input">
+        <input type="submit" id="submit">
+    </form>
+
+    <div id="consolapadre">
+        
+        <div id="console">
+            Consola: <br>
+        </div>
+
+    </div>
+   
+
+</body>
+
+<script type="text/javascript" >
+
+/*
+var pikachubloque = document.getElementById("pikachu")
+var pikachuvida = 100;
+
+var nidoranbloque = document.getElementById("nidoran")
+var nidoranvida = 100;
+*/
+
+let pikaEl = document.querySelector('#pika')
+let nidoEl = document.querySelector('#nido')
+let pika = [100,10, "pikachu", '240,230,140', '1']
+let nido = [100,10, "nidoran", '148,0,211', '1']
+
+let pikaOpacidad = 1.0
+let nidoOpacidad = 1.0
+//vida inicial
+pika.innerText = pika[0]
+nido.innerText = nido[0]
+
+//consola pkmn
+let consola = document.querySelector('#console')
+
+//los forms
+let submit = document.querySelector("#submit")
+let form = document.querySelector("form")
+let input = document.querySelector("#input")
+
+/*
+function updateLife() {
+    pikachubloque.innerHTML = "<p>" + pikachuvida + "</p>"
+    nidoranbloque.innerHTML = "<p>" + nidoranvida + "</p>"
+    //document.getElementById("pikachuvida").innerHTML + pikachuvida;
+    //document.getElementById("nidoranvida").innerHTML + nidoranvida;
+}*/
+
+pikaEl.onclick = function() {
+    pegar(pika, nido, nidoranvida, nidoEl)
+}
+
+nidoEl.onclick = function() {
+    pegar(nido, pika, pikachuvida, pikaEl)
+}
+
+
+function pegar(personaje, personaje2, elemento, coloreable){
+    console.log(personaje[2] + ' uso placaje!')
+    consola.innerText += '>' + personaje[2] + ' uso placaje!\n'
+    consola.innerText += '>' + personaje[2] + ' le hizo ' + personaje[1] + ' de daño a ' + personaje2[2] + '\n'
+
+    personaje2[0] -= personaje[1]
+    elemento.innerText = personaje2[0]      //le baja la vida al otro
+
+    //color
+    personaje2[4] -= 0.1 //opacidad
+    coloreable.style.backgroundColor = "rgb("+ personaje2[3] + ", " + personaje2[4] + ")" //color
+    console.log("rgb("+ personaje2[3] + ", " + personaje2[4] + ")")
+
+    if(personaje2[0] <= 0){
+        console.log(personaje2[2] + ' está fuera de combate!!')
+        consola.innerText += '>' + personaje2[2] + ' está fuera de combate!!' + '\n'
+        pikaEl.onclick=null
+        nidoEl.onclick=null
+    }
+}
+
+//form js
+form.addEventListener("submit", function(e){
+    e.preventDefault()
+    bueno[0] = input.value
+    buenoEl.innerText = bueno[0]
+    maloEl.innerText = malo[0]
+})
+
+</script>

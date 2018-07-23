@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Actividad - Reserva de asientos </title>
+    <link rel="icon" type="image/png" href="https://vignette.wikia.nocookie.net/fantendo/images/f/fa/SSB_Pok%C3%A9mon_Classic.png/revision/latest?cb=20160327201140">
+    <style type="text/css">
+
+    @font-face {
+        font-family: "Pokemon GB";
+        src: url("Pokemon GB.ttf");
+    }
+
+    .sala{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+        font-family: Consolas;
+        padding: 0 10%;
+    }
+
+    .sala div{
+        border-style: dashed;
+        padding: 40px;
+    }
+
+
+    .body{
+        margin:0;
+    }
+
+    #console{
+        font-family: Pokemon GB;
+        font-size: 11px;
+        color:green;
+        background-color: black;
+        width: 500px;
+        border-style: dotted;
+        border-color: grey;
+    }
+
+    #consolapadre{
+        display: flex;
+        justify-content: center;
+    }
+
+    .reservado {
+        background-color: red;
+    }
+
+    .libre {
+        background-color: green;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <header>
+        <div class="sala">
+
+            <div class="reservado"> 1
+            </div>
+
+            <div class="reservado"> 2
+            </div>
+
+            <div class="libre"> 3
+            </div>
+
+            <div class="reservado"> 4
+            </div>
+
+            <div class="libre"> 5
+            </div>
+
+            <div class="libre"> 6
+            </div>
+
+             <div class="libre"> 7
+            </div>
+
+             <div class="libre"> 8
+            </div>
+
+             <div class="libre"> 9
+            </div>
+
+             <div class="reservado"> 10
+            </div>
+
+             <div class="reservado"> 11
+            </div>
+
+             <div class="reservado"> 12
+            </div>
+
+        </div>
+    </header>
+
+    <button id="botonliberar">
+        Liberar todos
+    </button>
+
+    <button id="botonreservar">
+        Reservar todos
+    </button>
+
+   
+
+</body>
+
+<script type="text/javascript" >
+
+var asientos = document.querySelectorAll(".sala div");
+var cont = asientos.length
+console.log("la cantidad total de asientos es " + cont)
+console.log("los asientos son: ")
+console.log(asientos)
+//var libres = document.querySelectorAll(".libre");
+//var boton = document.querySelector('#boton');
+
+
+botonliberar.onclick=function () {
+    console.log("aprete el boton para liberar todos los asientos!")
+    for (var i = 0; i < cont; i++) {
+        asientos[i].classList.remove('reservado')
+        asientos[i].className = 'libre'
+    }
+}
+
+botonreservar.onclick=function () {
+    console.log("aprete el boton para reservar todos los asientos!")
+    for (var i = 0; i < cont; i++) {
+        asientos[i].classList.remove('libre')
+        asientos[i].className = 'reservado'
+    }
+}
+
+
+/*
+for (var i = 0; i < libres.length; i++) {
+    libres[i].onclick=function(){
+        console.log("aprete un asiento libre!")
+        asientos[i].style.backgroundColor ="red"
+    }
+}
+*/
+
+//solucion del profe
+for (var i = 0; i < 12; i++) {
+    let asiento = asientos[i]
+    asiento.addEventListener("click", color)
+    console.log("agregue listener a un asiento")
+    console.log(asiento[i])
+    function color(){
+        //si esta ocupado lo libero
+        console.log("clickee un asiento!!!")
+        console.log(this)
+
+        if (asiento.classList.contains('reservado')){
+            console.log("cambie color a un asiento rojo -> verde")
+            asiento.classList.remove('reservado')
+            asiento.className = 'libre'
+
+        } else if (asiento.classList.contains('libre')){
+            console.log("cambie color a un asiento verde -> rojo")
+            asiento.classList.remove('libre')
+            asiento.className = 'reservado'
+        }
+    }
+}
+
+console.log("asientos")
+
+//Una mejor solucion es utilizar clases
+//DONE
+
+</script>
+</html>
