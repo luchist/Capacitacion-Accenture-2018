@@ -270,3 +270,32 @@ el.style.backgroundColor = 'blue'
 var creado = document.createElement("p")
 creado.innerText = "holiss"
 elementohtml.append(creado)         //appenddeo al final del elemento html
+
+
+var parrafos = document.querySelectorAll("p")
+var boton = document.querySelector('#boton')
+
+//necesitamos recorrer con un for porque parrafos es un array, no un elemento
+/*
+boton.onclick=function () {
+    var parrafoContado = parrafos.lenght
+    for (var i = 0; i < parrafoContado; i++) {
+        parrafos[i].style.color="yellow"
+    }
+}
+*/
+
+//otra mejora, separamos el for en una funcion aparte
+
+
+function colores(argumento, argumento2){
+    var parrafoContado = argumento.lenght
+    for (var i = 0; i < parrafoContado; i++) {
+        argumento[i].style.color="argumento2"
+    }
+}
+
+var parrafos = document.querySelectorAll("p")
+boton.onclick=function () {
+    colores(parrafos, red)
+}
