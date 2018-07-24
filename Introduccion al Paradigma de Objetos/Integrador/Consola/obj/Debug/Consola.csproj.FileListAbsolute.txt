@@ -1,0 +1,8 @@
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Consola\bin\Debug\Consola.exe.config
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Consola\bin\Debug\Consola.exe
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Consola\bin\Debug\Consola.pdb
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Consola\bin\Debug\Entidades.dll
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Consola\bin\Debug\Entidades.pdb
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Consola\obj\Debug\Consola.csprojResolveAssemblyReference.cache
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Consola\obj\Debug\Consola.exe
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Consola\obj\Debug\Consola.pdb

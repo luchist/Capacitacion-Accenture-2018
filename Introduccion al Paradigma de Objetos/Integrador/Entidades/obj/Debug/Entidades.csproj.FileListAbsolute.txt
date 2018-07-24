@@ -1,0 +1,5 @@
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Entidades\bin\Debug\Entidades.dll
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Entidades\bin\Debug\Entidades.pdb
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Entidades\obj\Debug\Entidades.dll
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Integrador\Entidades\obj\Debug\Entidades.pdb
