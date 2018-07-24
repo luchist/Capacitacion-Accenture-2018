@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Factura:DocumentoComercial
+    public class Remito:DocumentoComercial
     {
-        public string Tipo { get; set; }
-
-        public Factura(string tipo, string numero, DateTime fecha, string cliente, string direccion, string condicioniva, string condicionventa, string detalle, decimal total)
+        public Remito(string numero, DateTime fecha, string cliente, string direccion, string condicioniva, string condicionventa, string detalle, decimal total)
         {
-            this.Tipo = tipo;
             this.Numero = numero;
             this.Fecha = fecha;
             this.Cliente = cliente;

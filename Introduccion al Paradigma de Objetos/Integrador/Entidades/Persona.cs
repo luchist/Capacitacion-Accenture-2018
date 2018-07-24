@@ -13,5 +13,8 @@ namespace Entidades
         public string Email { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
+
+        //Constructor vacio por defecto, ya que es una clase abstracta
+        public Persona(){;}
     }
 }
