@@ -1,0 +1,6 @@
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Introduccion al Paradigma de Objetos\bin\Debug\Introduccion al Paradigma de Objetos.exe.config
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Introduccion al Paradigma de Objetos\bin\Debug\Introduccion al Paradigma de Objetos.exe
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Introduccion al Paradigma de Objetos\bin\Debug\Introduccion al Paradigma de Objetos.pdb
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Introduccion al Paradigma de Objetos\obj\Debug\Laboratorio 1 - Ejercicio 1.csprojResolveAssemblyReference.cache
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Introduccion al Paradigma de Objetos\obj\Debug\Introduccion al Paradigma de Objetos.exe
+C:\Users\educacionit\Desktop\Capacitacion-Accenture-2018\Introduccion al Paradigma de Objetos\Introduccion al Paradigma de Objetos\obj\Debug\Introduccion al Paradigma de Objetos.pdb
