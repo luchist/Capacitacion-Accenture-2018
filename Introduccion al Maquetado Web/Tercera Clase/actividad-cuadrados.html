@@ -41,6 +41,7 @@
         color: #2C6C67;
         font-weight: bolder;
         margin: 50px;
+        justify-content: center;
     }
 
     .body{
@@ -71,7 +72,11 @@
 
     .transform:hover{
     	color: violet;
-    	border-color: black;
+      font-family: Pokemon GB;
+      font-size: 14;
+      font-weight: bold;
+      font-display: block;
+    	border-color: brightgreen;
       border-style: dashed;
     }
 
@@ -97,11 +102,6 @@
         </div>
     </header>
 
-    <form>
-        <input type="text" id="input">
-        <input type="submit" id="submit">
-    </form>
-
     <div id="consolapadre">
 
         <div id="console">
@@ -125,8 +125,8 @@ var nidoranvida = 100;
 
 let pikaEl = document.querySelector('#pika')
 let nidoEl = document.querySelector('#nido')
-let pika = [100,10, "pikachu", '240,230,140', '1']
-let nido = [100,10, "nidoran", '148,0,211', '1']
+let pika = [100,10, "PIKACHU", '240,230,140', '1']
+let nido = [100,10, "NIDORAN", '148,0,211', '1']
 
 let pikaOpacidad = 1.0
 let nidoOpacidad = 1.0
@@ -160,9 +160,11 @@ nidoEl.onclick = function() {
 
 
 function pegar(personaje, personaje2, elemento, coloreable){
+    //aviso por consola del navegador
     console.log(personaje[2] + ' uso placaje!')
-    consola.innerText += '>' + personaje[2] + ' uso placaje!\n'
-    consola.innerText += '>' + personaje[2] + ' le hizo ' + personaje[1] + ' de daño a ' + personaje2[2] + '\n'
+    //informo por consola del juego
+    consola_log(personaje[2] + ' uso placaje')
+    consola_log(personaje[2] + ' le hizo ' + personaje[1] + ' de daño a ' + personaje2[2])
 
     personaje2[0] -= personaje[1]
     elemento.innerText = personaje2[0]      //le baja la vida al otro
@@ -173,19 +175,19 @@ function pegar(personaje, personaje2, elemento, coloreable){
     console.log("rgb("+ personaje2[3] + ", " + personaje2[4] + ")")
 
     if(personaje2[0] <= 0){
+        //aviso por consola de navegador
         console.log(personaje2[2] + ' está fuera de combate!!')
-        consola.innerText += '>' + personaje2[2] + ' está fuera de combate!!' + '\n'
+        //informo por consola del juego
+        consola_log(personaje2[2] + ' enemigo se debilito')
+        consola_log(personaje[2] + ' ganó 25 puntos EXP.')
         pikaEl.onclick=null
         nidoEl.onclick=null
     }
 }
 
-//form js
-form.addEventListener("submit", function(e){
-    e.preventDefault()
-    bueno[0] = input.value
-    buenoEl.innerText = bueno[0]
-    maloEl.innerText = malo[0]
-})
+//muestro el string por la consola del juego, agregando ¡! y doble enter al final
+function consola_log(string){
+    consola.innerText += '¡' + string + '!\n\n' //mejor espaciado entre oraciones
+}
 
 </script>
