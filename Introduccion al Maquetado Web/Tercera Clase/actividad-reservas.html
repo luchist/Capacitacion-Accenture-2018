@@ -45,6 +45,15 @@
         width: 500px;
         border-style: groove;
         border-color: grey;
+
+        -webkit-transition: color 3s; /* For Safari 3.0 to 6.0 */
+        transition: color 3s; /* For modern browsers */
+    }
+
+    #console:hover{
+      border-style: dotted;
+    	border-color: brightgreen;
+      font-size: 12px;
     }
 
     #consolapadre{
@@ -183,7 +192,8 @@ botoninfolibres.onclick=function () {
         }
     }
     console.log("HAY " + libres + " asientos libres!");
-    consola.innerText += '> HAY ' + libres + ' asientos libres!\n'
+    consola_log("HAY " + libres + " asientos libres!");
+    //consola.innerText += '> HAY ' + libres + ' asientos libres!\n'
 }
 
 
@@ -224,10 +234,17 @@ for (var i = 0; i < cont; i++) {
     }
 }
 
+//muestro el string por la consola del juego, agregando doble enter al final
+function consola_log(string){
+    consola.innerText += string + '!\n\n' //mejor espaciado entre oraciones
+}
+
 console.log("asientos")
 
 //Una mejor solucion es utilizar clases
 //DONE
+
+
 
 </script>
 </html>
