@@ -58,3 +58,11 @@ where ListPrice > 500 and Color = 'Black';
  */
 select BusinessEntityID, HireDate, VacationHours from HumanResources.Employee
 where year(HireDate) > 2000;
+
+/*
+ * Mostrar el nombre, número de producto, precio de lista y el precio de lista
+ * incrementado en un 10% de los productos cuya fecha de fin de venta sea anterior al día de hoy
+ */
+select Name, ProductNumber, (ListPrice*1.10), SellEndDate from Production.Product
+where SellEndDate < GETDATE(); /*comparar fechas por menor!*/ 
+/*TODO: arreglar la consulta */
