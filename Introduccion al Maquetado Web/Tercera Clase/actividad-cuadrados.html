@@ -28,8 +28,8 @@
     #pika{
         width: 150px;
         height: 150px;
-        background-color: yellow;
-        color: brown;
+        background-color: #FAD61F;
+        color: #FD3B18;
         font-weight: bolder;
         margin: 50px;
     }
@@ -37,8 +37,8 @@
     #nido{
         width: 150px;
         height: 150px;
-        background-color: purple;
-        color:black;
+        background-color: #98709A;
+        color: #2C6C67;
         font-weight: bolder;
         margin: 50px;
     }
@@ -62,6 +62,18 @@
         justify-content: center;
     }
 
+    .transform{
+    	margin: 20px;
+        -webkit-transition: color 3s; /* For Safari 3.0 to 6.0 */
+        transition: color 3s; /* For modern browsers */
+    }
+
+    .transform:hover{
+    	color: violet;
+    	border-color: black;
+      border-style: dashed;
+    }
+
 </style>
 
 </head>
@@ -70,14 +82,14 @@
     <header>
         <div class="bloquecontainer">
 
-            <div id="pika"> 
-                Pikachu  <br> HP: 
+            <div id="pika" class="transform">
+                Pikachu  <br> HP:
                     <p id="pikachuvida">
                         100
                     </p>
             </div>
 
-            <div id="nido">
+            <div id="nido" class="transform">
                 Nidoran  <br> HP: <p id="nidoranvida"> 100 <p>
             </div>
 
@@ -90,13 +102,13 @@
     </form>
 
     <div id="consolapadre">
-        
+
         <div id="console">
             Consola: <br>
         </div>
 
     </div>
-   
+
 
 </body>
 
