@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        /*Reset*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*
+                La regla de box sizing nos sirve para establecer de que forma se va a calcular la dimension de una caja. Puede tomar dos valores , content-box(default) o border-box (que hace que el borde y el padding no cuenten para el ancho final)
+            */
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Consolas;
+            font-size: 16;
+        }
+
+        header{
+            /*
+                Por defecto un flex viene prconfigurado con tres reglas : direccion , wrap y alineacion vertical. 
+            */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #2196F3;
+            /*
+                La regla de box shadow nos sirve para generar sombra interna o externa en una caja y puede tomar los siguientes valores : 
+
+                NX NY BLUR ESPARCIMIENTO <color> <tipo>
+
+            */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3)
+        }
+
+        header h1 , header a , footer{
+            color:  white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /*  
+        Pseudo Selector : 
+            
+            :nth-child(N) : El pseudo selector nth sirve para seleccionar porciones de elementos por orden de aparicion en el DOM
+        
+        */
+
+        a:nth-child(2) {
+            margin: 0 8px;
+        }
+
+        main {
+            padding: 16px;
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: rgb(13, 138, 255);
+            padding: 16px;
+            text-align: center;
+        }
+        /*
+            Altura :
+
+            FIJA : (Ej.: px) Cualquier caja puede tomar en cualquier momento una altura absoluta
+
+            RELATIVAS : (Ej.: %) Para que una caja pueda calcular su altura en porcentaje su padre directo tiene que tener una altura absoluta(fija) ó que tenga una altura relativa precalculada
+        */
+        header nav{
+            position: fixed;
+            top: 0;
+            left: -100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            box-shadow: 8px 0px 10px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            z-index: 2;
+            background-color: rgb(13, 138, 255);
+            width: 50%;
+            max-width: 250px;
+            height: 100%;
+        }
+
+        header:hover{
+            /*background-color: #0097A7;*/
+            background-color: #006776;
+            color: #47B6C6;
+        }
+
+        header nav:hover{
+            /*background-color: #0097A7;*/
+            background-color: #006776;
+            color: #47B6C6;
+        }
+
+        footer:hover{
+            /*background-color: #0097A7;*/
+            background-color: #006776;
+            color: #47B6C6;
+        }
+
+        button{border: none;background: transparent;color: white;margin-right: 8px;position: relative;z-index: 5}
+
+        .expanded{
+            left: 0;
+        }
+
+        .collapsed{
+            left: 100;
+        }
+
+    </style>
+</head>
+<body>
+<!-- (header>h1+nav>a*3)+(main>h2)+(footer>p) -->
+    <header>
+        <button class="material-icons" id="menu_button">menu</button>
+        <h1>Titulo</h1>
+        <nav id="menu_expand">
+            <a href="#">perfil</a>
+            <a href="#">portfolio</a>
+            <a href="#">contacto</a>
+        </nav>
+    </header>
+    <main>
+        <h2 style="color: #55C6D6">home</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <ul>
+            <li>Ir a <a href="http://packagecontro.io/installation">Package Control</a></li>
+            <li>Copiar el codigo de la version que tengamos instalado</li>
+            <li>Volver a Sublime e ir a las opciones View > Show Console</li>
+            <li>Pego el codigo copiado</li>
+            <li>ctrl + shift + p</li>
+            <li>Buscar la opcion Install Package</li>
+            <li>Instalar Emmet + CSS3 Syntax + Javascript Completions/Javascript Enhancements</li>
+            <li>https://docs.emmet.io/cheat-sheet/</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; Copyright - 2018</p>
+    </footer>
+</body>
+
+<script type="text/javascript" >
+
+    let textos = {
+        perfil : "Este es mi perfil",
+        portfolio : "Mis trabajos realizados",
+        contacto : "Podes buscarme en ..."
+    }
+
+    var btn = document.getElementById('menu_button')
+
+
+    btn.addEventListener ("click", function() {
+        /*var menu = document.getElementById('menu_expand');
+
+        
+        if (menu.classList.contains('collapsed')){
+            menu.classList.remove('collapsed')
+            menu.classList.add('expanded')
+        } else if (menu.classList.contains('expanded')){
+                    menu.classList.remove('expanded')
+                    menu.classList.add('collapsed')
+        }*/
+
+        var menu = document.querySelector('nav')
+        menu.classList.toggle('expanded')
+    })
+
+        
+
+        /*
+         if (oculto == true) {
+            mostrar_menu()
+            oculto = false
+            console.log("Se llamo a mostrar menu")
+         } else {
+            ocultar_menu()
+            oculto = true
+            console.log("Se llamo a OCULTAR menu")
+         }
+        */
+    
+    for (var i = 0; i <= 3; i++) {
+        let links = document.querySelectorAll("a");
+        let link = links[i]
+        console.log(links)
+        link.addEventListener ("click", mostrarContenido)
+        function mostrarContenido(){
+            let indice = link.innerText
+            let texto = textos[indice]
+            console.log(indice)
+            console.log(texto)
+            let p = document.querySelector("p")
+            p.innerText = texto
+            console.log("Agregue " + texto + " al main > p!!!")
+            var menu = document.querySelector('nav')
+            menu.classList.toggle('expanded')
+        }   
+    }
+
+    function ocultar_menu(){
+        var menu = document.getElementById('menu_expand');
+        console.log("se va a ocultar el menu!")
+        menu.style.left= "-100%";
+    }
+
+    function mostrar_menu(){
+        var menu = document.getElementById('menu_expand');
+        console.log("se va a mostrar el menu!")
+        menu.style.left= 0;
+        //element.classList.add(class)
+        //element.classList.remove(class)
+        //element.classList.contains(class);
+    }
+
+    //var links = document.querySelector("")
+        /*
+            1) Agarrar el boton del header y guardarlo en la variable btn
+            2) Agarrar todos los links del nav y guardarlos en la variable links
+            3) A btn asignarle un evento de click
+            4) A cada link asignarles un evento de click y cancelarles el default
+            5) el callback(funcion) del evento click de btn tiene que abrir y cerrar la barra de navegacion. Recordar que la regla que me la esconde es left : -100%
+            6) Cada vez le hago click a un link , tengo que ir a buscar al objeto textos el texto correspondiente y modificar el <p> del <main>
+    
+        */
+
+    </script>
+</html>
