@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<button>click</button>
+<body>
+<script>
+	var btn = document.querySelector("button")
+	
+	btn.addEventListener("click",saludar,true)
+	document.addEventListener("click",function(e){
+		console.log(e)
+		console.log("Saludo desde el DOM")
+	},true)
+
+	function saludar(){console.log("Hola")}
+</script>
+</body>
+</html>

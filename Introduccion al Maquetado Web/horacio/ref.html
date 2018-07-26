@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ <script>
+ 	//document.createElement(String nombre) => HTMLElement / UnknownElement
+ 	let p = document.createElement("p")
+ 	let body = document.querySelector("body")
+
+ 	console.dir(p)
+ 	p.innerText = "lorem ipsum"
+ 	//Node.appendChild(Node) => Ubica un nodo de la memoria en la ultima ubicacion disponible de otro nodo
+ 	//Node.removeChild(Node) => Remueve un nodo de otro
+ 	body.appendChild(p)
+ 		
+ </script>
+</body>
+</html>

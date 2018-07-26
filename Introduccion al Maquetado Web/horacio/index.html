@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<style>
+		/*Reset*/
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			/*
+				La regla de box sizing nos sirve para establecer de que forma se va a calcular la dimension de una caja. Puede tomar dos valores , content-box(default) o border-box (que hace que el borde y el padding no cuenten para el ancho final)
+			*/
+		}
+
+		html {
+			height: 100%;
+		}
+
+		body {
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		header{
+			/*
+				Por defecto un flex viene prconfigurado con tres reglas : direccion , wrap y alineacion vertical. 
+			*/
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 8px 16px;
+			background-color: rgb(13, 138, 255);
+			/*
+				La regla de box shadow nos sirve para generar sombra interna o externa en una caja y puede tomar los siguientes valores : 
+
+				NX NY BLUR ESPARCIMIENTO <color> <tipo>
+
+			*/
+			box-shadow: 0 4px 10px rgba(0,0,0,0.3)
+		}
+
+		header h1 , header a , footer{
+			color:  white;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		/*	
+		Pseudo Selector : 
+			
+			:nth-child(N) : El pseudo selector nth sirve para seleccionar porciones de elementos por orden de aparicion en el DOM
+		
+		*/
+
+		a:nth-child(2) {
+			margin: 0 8px;
+		}
+
+		main {
+			padding: 16px;
+			flex-grow: 1;
+		}
+
+		footer {
+			background-color: rgb(13, 138, 255);
+			padding: 16px;
+			text-align: center;
+		}
+		/*
+			Altura :
+
+			FIJA : (Ej.: px) Cualquier caja puede tomar en cualquier momento una altura absoluta
+
+			RELATIVAS : (Ej.: %) Para que una caja pueda calcular su altura en porcentaje su padre directo tiene que tener una altura absoluta(fija) ó que tenga una altura relativa precalculada
+		*/
+		header nav{
+			position: fixed;
+			top: 0;
+			left: -100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+			box-shadow: 8px 0px 10px rgba(0,0,0,0.5);
+			transition: all 0.3s ease;
+			z-index: 2;
+			background-color: rgb(13, 138, 255);
+			width: 50%;
+			max-width: 250px;
+			height: 100%;
+		}
+		button{border: none;background: transparent;color: white;margin-right: 8px;position: relative;z-index: 5}
+
+
+		.abierto{left: 0}
+
+	</style>
+</head>
+<body>
+<!-- (header>h1+nav>a*3)+(main>h2)+(footer>p) -->
+	<header>
+		<button  id="btn" class="material-icons">menu</button>
+		<h1>Titulo</h1>
+		<nav>
+			<!--nav a != nav > li > a-->
+			<!--<li>--><a href="http://google.com">perfil</a><!--</li>-->
+			<!-- nav > a -->
+			<a href="#">portfolio</a>
+			<a href="#">contacto</a>
+		</nav>
+	</header>
+	<main>
+		<h2>home</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<ul>
+			<li>Ir a <a href="http://packagecontro.io/installation">Package Control</a></li>
+			<li>Copiar el codigo de la version que tengamos instalado</li>
+			<li>Volver a Sublime e ir a las opciones View > Show Console</li>
+			<li>Pego el codigo copiado</li>
+			<li>ctrl + shift + p</li>
+			<li>Buscar la opcion Install Package</li>
+			<li>Instalar Emmet + CSS3 Syntax + Javascript Completions/Javascript Enhancements</li>
+			<li>https://docs.emmet.io/cheat-sheet/</li>
+		</ul>
+	</main>
+	<footer>
+		<p>&copy; Copyright - 2018</p>
+	</footer>
+	<script>
+	let textos = {
+		perfil : "Este es mi perfil",
+		portfolio : "Mis trabajos realizados",
+		contacto : "Podes buscarme en ..."
+	}
+		/*
+			
+			
+			
+			
+			
+			
+	
+		*/
+
+		//ECMAScript6 = ECMA es una empresa que desarrolla lenguajes y uno de los dialectos de ES es Javascript 
+		//1) Agarrar el boton del header y guardarlo en la variable btn
+
+		let btn = document.getElementById('btn')
+
+		//2) Agarrar todos los links del nav y guardarlos en la variable links
+
+		let links = document.querySelectorAll("nav > a")
+
+
+		//3) A btn asignarle un evento de click
+		//Evento : La ejecucion de una funcion(callback) como respuesta a una accion
+
+		//Cuando js lee una fucion, si la misma tiene los parentesis argumentales, el motor la tiene que ejecutar en la linea en la que aparece
+		//Todas las funciones son expresiones, entonces siempre me devuelven el valor de su retorno
+		//Si una funcion no tiene retorno, por expresion se transforma en undefined
+		
+		//btn.onclick = console.log(1)
+
+		/*
+		btn.onclick = saludar
+		btn.onclick = foo
+
+		
+		*/
+
+		//Node.addEventListener(String evento,Function callback)
+		btn.addEventListener("click",function(){
+
+			//5) el callback(funcion) del evento click de btn tiene que abrir y cerrar la barra de navegacion. Recordar que la regla que me la esconde es left : -100%
+			let nav = document.querySelector("nav")
+			/*classList es una propiedad de todos los nodos del DOM y es un objeto que contiene funciones como add , remove o toggle*/
+			nav.classList.toggle("abierto")
+
+		})		
+		/*
+		btn.addEventListener("click",saludar)
+		btn.addEventListener("click",foo)
+		btn.addEventListener("click",function(){
+			console.log("fn anonima")
+		})
+		
+			Un evento se propaga en todo el DOM de dos formas : Bubbling y Capturing 
+
+			Bubbling : Adentro hacia afuera
+			Capturing : opuesto a bubbling
+
+			La propagacion de un evento hace que un elemento dispare su propio callback y que vaya subiendo jerarquimanente a traves de todos los elementos padre directos disparandoles el callback registrado para el mismo evento si es que hubiera alguno
+		*/
+
+		//window.saludar = function saludar(){}
+		function saludar(){
+			console.log("hola")
+		}
+
+		function foo(){
+			console.log("chau")
+		}
+
+
+		//4) A cada link asignarles un evento de click y cancelarles el default
+		for (let i = 0; i < links.length; i++) {
+			links[i].addEventListener("click",function(e){
+				/*
+					El callback directo registrado en un evento recibe por defecto un objeto como primer parametro. Este objeto representa el evento disparado
+				*/
+				e.preventDefault()
+				//e.stopPropagation()
+				
+				//6) Cada vez le hago click a un link , tengo que ir a buscar al objeto textos el texto correspondiente y modificar el <p> del <main>
+				let link = e.target
+				let indice = link.innerText
+				let texto = textos[indice]
+				let p = document.querySelector("p")
+				p.innerText = texto
+				let nav = document.querySelector("nav")
+				nav.classList.toggle("abierto")
+			})
+		}
+
+		/*
+
+		Cada etiqueta en JS esta representada por un JSON(JavaScript Object Notation)
+		
+		window : BOM (Browser Object Model)
+
+		innerWidth / innerHeight : Medidas del documento abierto 
+		outerHeight / outerWidth : medidas del navegador
+		location.href = Barra de navegacion
+		history.back/forward() : Manipula el historial
+
+
+		window.document : API Web DOM (Document Object Model)
+
+		console.dir(Object) : Fuerza el logueo en formato JSON de un objeto
+
+		
+		console.error/warn = Nos permite ver todo el stack de ejecucion. Ej.: 
+
+		function uno(){dos()}
+		function dos(){tres()}
+		function tres(){cuatro()}
+		function cuatro(){console.error("Error")}
+		uno()
+
+		console.table() : Muestra una estructura completa de manera tabular
+	
+		Son Funciones bloqueantes que detienen la ejecucion del programa(html y js)
+		alert()
+		confirm()
+		prompt()
+
+		
+
+		Notacion de corchete vs punto
+
+		var arr = [1,2,3]
+		var indice = 2
+
+		arr[0] => 1		
+		arr["length"] => 3
+		arr[indice] => 3
+
+		arr.length => 3
+		arr.0 => Unexpected Number
+		arr.indice => undefined 
+
+		*/
+
+	</script>
+</body>
+</html>

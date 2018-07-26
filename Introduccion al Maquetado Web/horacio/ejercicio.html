@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+	<div>
+		<label>Nombre</label>
+		<input type="text">
+	</div>
+	<div>
+		<label>Comentario</label>
+		<input type="text">
+	</div>
+	<button>Enviar</button>
+</form>
+<section id="comentarios">
+	
+</section>
+<script>
+//1) Agarrar el formulario
+let form = document.querySelector("form")
+//2) El formulario tiene un evento submit que tiene que ser cancelado
+form.addEventListener("submit",function(e){
+	e.preventDefault()
+	//3) Dentro del callback del submit agarrar los dos inputs y extraerles su valor
+	let inputs = document.querySelectorAll("input")
+	let nombre = inputs[0].value
+	let comentario = inputs[1].value
+	//4) Crear una etiqueta div que adentro tenga un h2 y un p. El h2 tiene que tener el nombre y el p el comentario
+	let div = document.createElement("div")
+	let h2 = document.createElement("h2")
+	let p = document.createElement("p")
+
+	h2.innerText = nombre
+	p.innerText = comentario
+
+	div.appendChild(h2)
+	div.appendChild(p)
+	//5) Agregar el div a la seccion de comentarios
+	document.getElementById("comentarios").appendChild(div)
+})
+
+
+</script>
+</body>
+</html>
