@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Practica Flex </title>
+    <style>
+
+    *{
+        /*Reset*/
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*
+         * La regla de box sizing nos sirve para establecer de que forma se va a calcular la dimension
+         * de una caja. Puede tomar dos valores, content-box (default) o border-box()
+         */
+        font-family: Consolas;
+
+    }
+
+    html {
+            height: 100%;
+        }
+
+    body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /*alinear el titlulo y los links a la misma altura*/
+        padding: 8px 16px; /*los padding que nos dio h*/
+
+        background-color: #FBE739;
+        color: #2C2D32;
+
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .links{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+        align-items: center;
+    }
+
+    .links li{
+        margin-left: 20px;
+        font-size: 24px;
+        border: 1px solid black;
+        padding: 8px 16px;
+        color: white;
+        background-color: #2C2D32;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .links li:hover{
+        color: #2C2D32;
+        background-color: white;
+    }
+
+    .title{
+        padding-left: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+
+    footer{
+        text-align: center;
+        font-family: Calibri;
+        padding: 16px;
+        background-color: #FBE739;
+    }
+
+    main{
+        font-family: Consolas;
+        font-weight: bold;
+        text-align: left;
+        flex-grow: 1;
+        padding: 16px;
+        /*background-color: #FAAB1A*/
+    }
+
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1 class="title"> Practica Flex </h1>
+        <ul class="links">
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+        </ul>
+    </header>
+
+    <main>
+        
+        <h1 class="title">Titulo</h1>
+
+        <h2>
+            Subtitulo
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dignissimos quae, pariatur praesentium corrupti laboriosam magni, possimus beatae. Culpa dolorum porro rem corrupti. Laborum eaque aut facilis magni esse. Quo.
+        </p>
+
+    </main>
+
+    <footer class="footer">
+        Pie de Pagina
+    </footer>
+    
+</body>
+</html>
