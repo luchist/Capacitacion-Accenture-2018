@@ -75,7 +75,7 @@ function asignar_eventos_mouse(object){
 
 let input_nombre = document.getElementById('form_nombre')
 let input_pass = document.getElementById('form_password')
-let btn_submit = document.getElementById('submit')
+let form = document.getElementById('form')
 
 /*
 Me traigo la BD de usuarios
@@ -89,6 +89,7 @@ xhr2.addEventListener("load",function(){
         var usuarios = JSON.parse(xhr2.responseText)
         evento_user(usuarios)
         evento_pass(usuarios)
+        boton()
     }
     else {
         var usuarios = "no se pudo traer el JSON!"
@@ -128,8 +129,11 @@ function evento_pass(usuarios){
     })
 }
 
-btn_submit.addEventListener("submit",function(e){
-    //e.preventDefault()
-    console.log("ME FUI A GOOGLE!")
-})
+function boton(){
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        console.log("Toque el boton!!!")
+        location.href='http://www.google.com';
+    })
+}
 
