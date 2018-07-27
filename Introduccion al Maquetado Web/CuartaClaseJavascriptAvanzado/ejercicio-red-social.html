@@ -13,14 +13,14 @@
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            max-height: 450px;
+            max-height: 500px;
             border-style: dashed;
             border-color: #9feaf9;
         }
 
         .comments h2{
             margin-bottom: 0px;
-            color: white;
+            color: #9feaf9;
         }
 
 
@@ -117,7 +117,7 @@
         let p = document.createElement("p")
         let comentarios = document.getElementById('comentarios')
 
-        h2.innerText = nombre + ':'
+        h2.innerText = nombre + ' dijo :'
         p.innerText = comentario
         div.appendChild(h2)
         div.appendChild(p)
