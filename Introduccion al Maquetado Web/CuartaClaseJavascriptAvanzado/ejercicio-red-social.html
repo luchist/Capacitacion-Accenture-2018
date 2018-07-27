@@ -18,7 +18,7 @@
             border-color: #9feaf9;
         }
 
-        .comments h2{
+        .comments b{
             margin-bottom: 0px;
             color: #9feaf9;
         }
@@ -38,6 +38,8 @@
             font-size: 85%;
             background-color: rgba(0, 0, 0, 0.04);
             border-radius: 3px;
+
+            box-sizing: border-box;
         }
 
         #comentarios>div:hover{
@@ -98,7 +100,7 @@
 </nav>
 
     <div>
-        <h2></h2>
+        <b></b>
         <p></p>
     </div>
 <section id="comentarios" class="comments">
@@ -124,13 +126,13 @@
         console.log(nombre + ' dijo : ' + comentario)
 
         let div = document.createElement("div")
-        let h2 = document.createElement("h2")
+        let b = document.createElement("b")
         let p = document.createElement("p")
         let comentarios = document.getElementById('comentarios')
 
-        h2.innerText = nombre + " - " + hh +':'+ mm
+        b.innerText = nombre + " - " + hh +':'+ mm
         p.innerText = comentario
-        div.appendChild(h2)
+        div.appendChild(b)
         div.appendChild(p)
         comentarios.appendChild(div)
     })
