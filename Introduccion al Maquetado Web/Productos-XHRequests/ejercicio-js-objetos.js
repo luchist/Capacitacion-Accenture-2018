@@ -140,6 +140,9 @@ function carga_html(array){
         let prod_color = "<p class='highlight'>Color</p><p> " + array[i].color + "</p></div>"
         contenedor.innerHTML += prod_div + prod_img + prod_name + prod_price + prod_color
     }
+
+    var userinfo = document.getElementById('username')
+    userinfo.innerHTML = 'ADMIN' //aca necesito el username de alguna forma!!
 }
 
 function destruir_form(){
