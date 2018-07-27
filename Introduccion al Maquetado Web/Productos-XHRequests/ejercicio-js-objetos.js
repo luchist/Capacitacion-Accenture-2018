@@ -5,31 +5,40 @@ let info = document.querySelector("#info")
 let contenedor = document.querySelector("#info")
 
 
-console.log("VOY A REALIZAR UNA PETICION XMLHttpRequest!")
-var xhr = new XMLHttpRequest()
-xhr.open("GET","productos.json")
-xhr.addEventListener("load",function(){
-    if(xhr.status == 200){
-        // document.querySelector('#cont').innerHTML = xhr.responseText
-        //console.log(JSON.parse(xhr.responseText)[0].nombre)
-        var productos = JSON.parse(xhr.responseText)
-        load_elements(productos)
-        //assign_hover(productos)
-    }
-})
-xhr.send()
-
 function load_elements(productos){
-    var cantidad = productos.length
+    console.log("VOY A REALIZAR UNA PETICION XMLHttpRequest de PRODUCTOS!")
+    var xhr = new XMLHttpRequest()
+    xhr.open("GET","productos.json")
+    xhr.addEventListener("load",function(){
+        if(xhr.status == 200){
+            // document.querySelector('#cont').innerHTML = xhr.responseText
+            console.log(JSON.parse(xhr.responseText)[0].nombre)
+            var productos = JSON.parse(xhr.responseText)
+            //load_elements(productos)
+            destruir_form()
+            carga_html(productos)
+        }
+    })
+    xhr.send()
+}
+
+function carga_html(array){
+
+    var cantidad = array.length
     console.log("ESTOY CARGANDO A TRAVES DE AJAX!!!")
     for (var i = 0;i < cantidad; i++){
         let prod_div   = "<div class='contenedor'>"
-        let prod_img   = "<p> <img src= " + productos[i].link + " ></p>"
-        let prod_name  = "<p class='highlight'>Nombre</p><p> " + productos[i].nombre + "</p>"
-        let prod_price = "<p class='highlight'>Precio</p><p> $"+ productos[i].precio + "</p>"
-        let prod_color = "<p class='highlight'>Color</p><p> " + productos[i].color + "</p></div>"
+        let prod_img   = "<p> <img src= " + array[i].link + " ></p>"
+        let prod_name  = "<p class='highlight'>Nombre</p><p> " + array[i].nombre + "</p>"
+        let prod_price = "<p class='highlight'>Precio</p><p> $"+ array[i].precio + "</p>"
+        let prod_color = "<p class='highlight'>Color</p><p> " + array[i].color + "</p></div>"
         contenedor.innerHTML += prod_div + prod_img + prod_name + prod_price + prod_color
     }
+}
+
+function destruir_form(){
+    let form = document.getElementById('form')
+    form.innerHTML = ""
 }
 
 /*agarro todos los productos y les pongo la accion onHover*/
@@ -55,12 +64,15 @@ function assign_hover(productos){
 /*
  * Ejercicio: Forms
  */
-let inputs = document.getElementsByTagName('input')
+
+//let inputs = document.getElementsByTagName('input')
 /*
 form.addEventListener("mouseout",function(e){
     console.log("ME FUI DEL FORM")
 })*/
 
+
+/*
 function asignar_eventos_mouse(object){
     object.onmouseout = function(){
         console.log("mouse_out")
@@ -71,16 +83,16 @@ function asignar_eventos_mouse(object){
     object.onblur = function(){
         console.log("blur")
     }
-}
+}*/
 
 let input_nombre = document.getElementById('form_nombre')
 let input_pass = document.getElementById('form_password')
-let form = document.getElementById('form')
 
 /*
 Me traigo la BD de usuarios
 */
 
+/*
 console.log("VOY A REALIZAR UNA PETICION XMLHttpRequest!")
 var xhr2 = new XMLHttpRequest()
 xhr2.open("GET","usuarios.json")
@@ -95,8 +107,58 @@ xhr2.addEventListener("load",function(){
         var usuarios = "no se pudo traer el JSON!"
     }
 })
-xhr2.send()
+xhr2.send()*/
 
+let usuario = document.querySelector("#form_nombre")
+let pass = document.querySelector("#form_password")
+usuario.addEventListener("blur",function(){
+    ajax("uno", usuario.value, this)
+})
+pass.addEventListener("blur",function(){
+    ajax("dos", pass.value, this)
+})
+
+let body = document.querySelector("#body")
+
+
+
+function ajax(m, dato, el) {
+    var a = {
+        uno:"usuario",
+        dos:"contraseña"
+    }
+    console.log("SALIO DE AJAX")
+    var xhr2 = new XMLHttpRequest()
+    xhr2.open("POST","usuarios.json")
+    xhr2.addEventListener("load",function(){
+        if (xhr2.status == 200) {
+            console.log("ENTRO AL IF 200")
+    //console.log(JSON.parse(xhr2.responseText)[a[m]])
+    console.log(JSON.parse(xhr2.responseText)[0])
+    console.log(a[m])
+    let usuarios = JSON.parse(xhr2.responseText)
+    //buscar en todos los usuarios
+    var found = usuarios.some(function (el) {
+        return el.usuario === usuario.value;
+    });
+    if (JSON.parse(xhr2.responseText)[0][a[m]] == dato) {
+        el.style.backgroundColor = "green"
+        load_elements()
+    } else {
+        el.style.backgroundColor = "red"
+    }
+    console.log(JSON.parse(xhr2.responseText)[a[m]])
+}
+})
+    xhr2.send()
+}
+
+function cargar_pagina(){
+    var html = " <header> MERCADOLIBRE UN POROTO AL LADO MIO </header> <form id='form'> <div> <label>Nombre:</label> <input type='text' id='form_nombre'>  </div>  <div>  <label>Contraseña:</label>  <input type='password' id='form_password'>  </div>  <div>  <button id='btn'> Enviar!  </button>  </div> </form> <div id='info'> </div>"
+    body.innerHTML = html
+}
+
+/*
 function evento_user(usuarios){
     input_nombre.addEventListener("blur",function(e){
         //buscar en la lista de usuarios
@@ -127,13 +189,14 @@ function evento_pass(usuarios){
             console.log("La contraseña es incorrecta!")
         }
     })
-}
+}*/
 
+/*
 function boton(){
     form.addEventListener("submit",function(e){
         e.preventDefault()
         console.log("Toque el boton!!!")
         location.href='http://www.google.com';
     })
-}
+}*/
 
