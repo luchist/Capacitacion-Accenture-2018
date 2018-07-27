@@ -29,18 +29,28 @@
             color: #9feaf9;
             background-color: #2b2e3b;
             border-color: #111218;
-            border-radius: 4px;
+            /*border-radius: 4px;*/
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            margin:5px;
+            /*margin:5px;*/
+
+            padding: 0;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+            margin: 0;
+            font-size: 85%;
+            background-color: rgba(0, 0, 0, 0.04);
+            border-radius: 3px;
         }
 
         #comentarios>div:hover{
             box-shadow: 0 10px 50px rgba(0,0,0,0.3);
             background-color: #2F3241;
+            font-style: oblique;
         }
 
         .comments p{
             margin-top: 0px;
+            color: #719fad;
         }
 
         form div label{
@@ -110,14 +120,17 @@
         //agarrar los dos inputs y extraerles su valor
         let nombre = form[0].value
         let comentario = form[1].value
-        console.log(nombre + " dijo " + comentario)
+        let today = new Date()
+        let hh = today.getHours()
+        let mm = today.getMinutes()
+        console.log(nombre + ' dijo : ' + comentario)
 
         let div = document.createElement("div")
         let h2 = document.createElement("h2")
         let p = document.createElement("p")
         let comentarios = document.getElementById('comentarios')
 
-        h2.innerText = nombre + ' dijo :'
+        h2.innerText = nombre + " - " + hh +':'+ mm
         p.innerText = comentario
         div.appendChild(h2)
         div.appendChild(p)
