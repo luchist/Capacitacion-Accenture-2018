@@ -91,3 +91,32 @@ use pubs;
 update titles
 	set price = (price * 1.1) --SET especifica los datos nuevos
 --puedo usar WHERE para restriingir los datos que quiero actualizar
+
+--Actualizar el precio de los libros de la editorial CA
+
+update titles
+SET price = price + 2
+FROM titles AS t
+INNER JOIN publishers AS p
+ON t.pub_id = p.pub_id
+WHERE p.state = 'CA'
+
+--chequeo
+select *
+FROM titles AS t
+INNER JOIN publishers AS p
+ON t.pub_id = p.pub_id
+WHERE p.state = 'CA'
+
+
+--Actualiza el precio de los lobros de la editorial del pais 'USA'
+--Update con SUBCONSULTA
+UPDATE titles
+SET price = price + 2
+WHERE pub_id
+IN
+	(
+	 SELECT pub_id
+	 FROM publishers
+	 WHERE country='USA'
+	)
