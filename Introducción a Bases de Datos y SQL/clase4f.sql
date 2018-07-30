@@ -75,3 +75,21 @@ GROUP BY V.stor_id, S.stor_name
 GO
 
 EXEC RecuperarPromedioVentas '19940101', '19941231'		-- ejecuta el procedimiento almacenado, ahora espera @FechaInicio y @FechaFin
+
+
+--WHILE
+
+DECLARE @contador int
+SET @contador = 0
+WHILE (@contador < 100)
+BEGIN
+	SET @contador = @contador + 1
+	PRINT 'valor es' + cast(@contador as varchar) --casteo contador, que es entero, a varchar
+END
+
+--WHILE CONTINUE - saltea los impares
+
+DECLARE @contador int
+SET @contador = 0
+WHILE (@contador < 100)
+BEGIN
