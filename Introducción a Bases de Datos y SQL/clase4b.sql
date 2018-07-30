@@ -135,7 +135,28 @@ WHERE p.pub_id = t.pub_id
 ORDER BY Libro
 --18 rows
 
+
 /*
-SELF JOIN
-Similar a Inner Join, pero las tablas son iguales, osea dos instancias de la misma tabla
+
+UNION
+
 */
+
+-- Nombres comunesa ambos: ANN y MARIA dos veces en la tabla employee -- 64 registros
+
+--UNION
+--Para poder hacer la union, las dos tablas deben tener el mismo numero de columnas y el mismo tipo de datos
+--(Porque se van a unir, uno abajo del otro)
+SELECT fname FROM employee --43 rows
+union
+select au_fname FROM authors --23rows
+--64 rows = 43 + 23 - 2 (que se repiten)
+-- La tabla resultante tiene datos ordenados, porque los tiene que ordenar para saber si
+-- hay duplicados
+
+-- UNION ALL
+SELECT fname FROM employee --43 rows
+union all
+select au_fname FROM authors --23rows
+--66 rows = 43 + 23 (no borra repetidos)
+-- La tabla resultante tiene datos desordenados
