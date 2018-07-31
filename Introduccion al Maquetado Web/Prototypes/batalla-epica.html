@@ -73,18 +73,23 @@
 
 <script>
 
-//Avion.prototype.nationality = "English";
+//pseudo herencia con prototipos
+Avion.prototype = new Maquinaria()
+Tren.prototype = new Maquinaria()
+Soldado.prototype = new Organico()
+Elefante.prototype = new Organico()
+
+Maquinaria.prototype = new Ejercito()
+Organico.prototype = new Ejercito()
 
 function Avion(){
     this.velocidad_maxima = 300
     this.cargo = 200
-    Maquinaria(this)
 }
 
 function Tren(){
     this.velocidad_maxima = 90
     this.cargo = 5000
-    Maquinaria(this)
 }
 
 function Soldado(){
@@ -92,30 +97,26 @@ function Soldado(){
     this.velocidad_maxima = 30
     this.municion = 200
     this.cargo = 15
-    Organico(this)
 }
 
 function Elefante(){
     //this.nombre = nombre
     this.velocidad_maxima = 40
     this.cargo = 50
-    Organico(this)
 }
 
-function Maquinaria(obj){
-    obj.sentimientos = false
-    obj.defensa = 10
-    Ejercito(obj)
+function Maquinaria(){
+    this.sentimientos = false
+    this.defensa = 10
 }
 
-function Organico(obj){
-    obj.sentimientos = true
-    obj.defensa = 2
-    Ejercito(obj)
+function Organico(){
+    this.sentimientos = true
+    this.defensa = 2
 }
 
-function Ejercito(obj){
-    obj.pais = "Argentina"
+function Ejercito(){
+    this.pais = "Argentina"
 }
 
 //asigno los botones
