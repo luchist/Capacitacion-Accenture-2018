@@ -114,7 +114,6 @@ function doble_peticion_promises(){
         })
         xhr.send()
         console.log("Se hizo el send de la primera request!")
-        console.log(url_interna)
     }).then(peticion_carga) // NO Hace falta pasarle la URL sino que utiliza el RESOLVE
     //si le paso la URL me da error, se ejecuta primero y queda url_interna en NULL
 }
