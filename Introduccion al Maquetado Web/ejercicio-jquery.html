@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <title></title>
+    <style type="text/css">
+    .rojo{
+        color: red;
+    }
+</style>
+</head>
+
+<body>
+    <p class="parrafo" id="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="parrafo" id="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="cont"></div>
+
+    <div class="botones">
+        <button id="btn_rojo_fondo">COLOR DE FONDO ROJO</button>
+
+        <button id="btn_violeta_fondo">COLOR DE FONDO VIOLETA</button>
+
+        <button id="btn_verde_fondo">COLOR DE FONDO VERDE</button>
+
+        <button id="btn_naranja_fondo">COLOR DE FONDO NARANJA</button>
+    </div>
+
+</body>
+
+
+<script type="text/javascript">
+
+
+    $(".cont").html("<h1>Hola Mundo</h1>")
+    $(".cont").empty()
+    var elemento = $("<h2>Holis</h2>")
+    var elemento2 = $("<h2>chaooo</h2>")
+    $(".cont").append(elemento)
+    $(".cont").prepend(elemento2)
+    /*
+    $(".parrafo").click(function(){
+        $(".parrafo").css({
+            "color":"red",
+            "font-size":"50px"
+        })
+    })*/
+
+    /*
+    $(".parrafo").on("click",function(){
+        $(".parrafo").css({
+            "color":"green",
+            "font-family":"Consolas"
+        })
+    })
+    $(".parrafo").hover(function(){
+        $(".cont").css("background-color","purple")
+    }, function(){
+        $(".cont").css("background-color","green")
+    })*/
+    /*$(".parrafo").fadeOut(2000)
+    $(".parrafo").fadeIn(2000)*/
+    /*$(".parrafo").slideUp(2000)
+    $(".parrafo").slideDown(2000)*/
+
+
+    $("#btn_rojo_fondo").on("click",function(){
+        $(parrafo_clickeado).css({
+            "background-color":"red",
+            "font-family":"Verdana"
+        })
+    })
+
+    $("#btn_violeta_fondo").on("click",function(){
+        $(parrafo_clickeado).css({
+            "background-color":"purple",
+            "font-family":"Arial Black"
+        })
+    })
+
+    $("#btn_verde_fondo").on("click",function(){
+        $(parrafo_clickeado).css({
+            "background-color":"green",
+            "font-family":"Consolas"
+        })
+    })
+
+    $("#btn_naranja_fondo").on("click",function(){
+        $(parrafo_clickeado).css({
+            "background-color":"orange",
+            "font-family":"Comic Sans MS"
+        })
+    })
+
+    var parrafo_clickeado = $("#parrafo, #parrafo2").on("click",function(){
+        return this
+    })
+
+/*
+    var parrafo_clickeado = $("#parrafo2").on("click",function(){
+        return this
+    })
+*/
+
+
+/*
+$.fn = plugin de jquery
+
+    $.fn.parrafo = function(){
+        $(this).click(
+            function(){
+                $(this).css({
+                "background-color":"orange",
+                "font-family":"Comic Sans MS"
+            })
+        }
+    }
+*/
+
+
+/*
+addClass
+removeClass
+toggleClass
+show
+hide
+toggle
+css
+click
+*/
+
+</script>
+</html>
