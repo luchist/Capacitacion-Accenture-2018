@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    #elefante{
+        background-image: url('elefant.png');
+        height: 100px;
+        width: 130px;
+        border-style: dashed;
+        border-color: grey;
+    }
+    #soldado{
+        background-image: url('soldier.jpg');
+        height: 100px;
+        width: 150px;
+        border-style: dashed;
+        border-color: green;
+    }
+    #tren{
+        background-image: url('thomas2.jpg');
+        height: 100px;
+        width: 150px;
+        border-style: dashed;
+        border-color: purple;
+    }
+    #avion{
+        background-image: url('plane-high.jpg');
+        height: 100px;
+        width: 150px;
+        border-style: dashed;
+        border-color: blue;
+    }
+    #arena{
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-style: groove;
+        border-color: red;
+        font-family: Consolas;
+        color: white;
+    }
+
+    #arena div:hover{
+        border-color: white;
+        border-style: groove;
+    }
+    form{
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    form button{
+        border-radius: 8px;
+    }
+</style>
+</head>
+
+<body>
+    
+<form>
+    <button id="avion_btn"> AVION </button>
+    <button id="tren_btn"> TREN </button>
+    <button id="soldado_btn"> SOLDADO </button>
+    <button id="elefante_btn"> ELEFANTE </button>
+</form>
+
+<div id="arena">
+    
+</div>
+
+</body>
+
+<script>
+
+//Avion.prototype.nationality = "English";
+
+function Avion(){
+    this.velocidad_maxima = 300
+    this.cargo = 200
+    Maquinaria(this)
+}
+
+function Tren(){
+    this.velocidad_maxima = 90
+    this.cargo = 5000
+    Maquinaria(this)
+}
+
+function Soldado(){
+    //this.nombre = nombre
+    this.velocidad_maxima = 30
+    this.municion = 200
+    this.cargo = 15
+    Organico(this)
+}
+
+function Elefante(){
+    //this.nombre = nombre
+    this.velocidad_maxima = 40
+    this.cargo = 50
+    Organico(this)
+}
+
+function Maquinaria(obj){
+    obj.sentimientos = false
+    obj.defensa = 10
+    Ejercito(obj)
+}
+
+function Organico(obj){
+    obj.sentimientos = true
+    obj.defensa = 2
+    Ejercito(obj)
+}
+
+function Ejercito(obj){
+    obj.pais = "Argentina"
+}
+
+//asigno los botones
+
+var btn_avion = document.querySelector('#avion_btn')
+var btn_tren = document.querySelector('#tren_btn')
+var btn_soldado = document.querySelector('#soldado_btn')
+var btn_elefante = document.querySelector('#elefante_btn')
+
+var arena = document.querySelector('#arena')
+
+btn_avion.addEventListener ("click", function(e) {
+    e.preventDefault()
+    let a = new Avion
+    agregar_a_la_arena("avion")
+    console.dir(a)
+})
+
+btn_tren.addEventListener ("click", function(e) {
+    e.preventDefault()
+    let a = new Tren()
+    agregar_a_la_arena("tren")
+    console.dir(a)
+})
+
+btn_soldado.addEventListener ("click", function(e) {
+    e.preventDefault()
+    let a = new Soldado()
+    agregar_a_la_arena("soldado")
+    console.dir(a)
+})
+
+btn_elefante.addEventListener ("click", function(e) {
+    e.preventDefault()
+    let a = new Elefante()
+    agregar_a_la_arena("elefante")
+    console.dir(a)
+})
+
+function agregar_a_la_arena(string){
+    let contenedor = document.createElement("div")
+    contenedor.setAttribute("id",string)
+    arena.appendChild(contenedor)
+}
+
+
+
+
+
+</script>
+</html>
