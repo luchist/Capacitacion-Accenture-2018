@@ -97,7 +97,7 @@ function doble_peticion_ajax(){
 
 function doble_peticion_promises(){
     let productos
-    let url_interna
+    var url_interna
     //let contenedor = document.querySelector("")
     var promesa = new Promise(function(resolve, reject){
         var xhr = new XMLHttpRequest()
@@ -107,7 +107,7 @@ function doble_peticion_promises(){
                 productos = JSON.parse(xhr.responseText)
                 url_interna = productos[1].url
                 console.log(url_interna)
-                resolve(url_interna)
+                resolve(url_interna) //aca ya estamos diciendo que es el resolve
                 destruir_form()
                 carga_html(productos)
             }
@@ -115,7 +115,8 @@ function doble_peticion_promises(){
         xhr.send()
         console.log("Se hizo el send de la primera request!")
         console.log(url_interna)
-    }).then(peticion_carga("productos2.json")) // la url interna me da error
+    }).then(peticion_carga) // NO Hace falta pasarle la URL sino que utiliza el RESOLVE
+    //si le paso la URL me da error, se ejecuta primero y queda url_interna en NULL
 }
 
 /*
