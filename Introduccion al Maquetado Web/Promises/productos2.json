@@ -1,0 +1,22 @@
+[{
+    "nombre" : "Peluche Flipazoo Dragon",
+    "precio" : 250,
+    "color" : "varios",
+    "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Wi0RZNscIe8QSM53dqlf8-cn86bm9evkxa7aPTHr2PUMaQP7",
+    "descripcion" : "un dragon que se convierte en unicornio",
+    "url" : "productos2.json"
+},{
+    "nombre" : "Peluche Flipazoo Lobo",
+    "precio" : 200,
+    "color" : "gris",
+    "link": "https://static.mercadoshops.com/flipazoo-original-peluches-en-transformalos-quinotoys_iZ963306825XsZ69121590XpZ13XfZ69121590-672647290-13XvZgrandexIM.jpg?v=master-20180720_085242",
+    "descripcion" : "un lobo que se convierte en elefante",
+    "url" : "productos2.json"
+},{
+    "nombre" : "Peluche Flipazoo Otro",
+    "precio" : 500,
+    "color" : "todos",
+    "link" : "https://i.ebayimg.com/images/g/vdkAAOSwOfdZsZ~Y/s-l300.jpg",
+    "descripcion" : "un bicho muy raro",
+    "url" : "productos2.json"
+}]

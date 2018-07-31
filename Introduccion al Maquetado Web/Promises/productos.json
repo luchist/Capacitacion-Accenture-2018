@@ -1,0 +1,36 @@
+[{
+    "nombre" : "Peluche Flipazoo Dragon",
+    "precio" : 250,
+    "color" : "varios",
+    "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Wi0RZNscIe8QSM53dqlf8-cn86bm9evkxa7aPTHr2PUMaQP7",
+    "descripcion" : "un dragon que se convierte en unicornio",
+    "url" : "productos2.json"
+},{
+    "nombre" : "Peluche Flipazoo Lobo",
+    "precio" : 200,
+    "color" : "gris",
+    "link": "https://static.mercadoshops.com/flipazoo-original-peluches-en-transformalos-quinotoys_iZ963306825XsZ69121590XpZ13XfZ69121590-672647290-13XvZgrandexIM.jpg?v=master-20180720_085242",
+    "descripcion" : "un lobo que se convierte en elefante",
+    "url" : "productos2.json"
+},{
+    "nombre" : "Peluche Flipazoo Otro",
+    "precio" : 500,
+    "color" : "todos",
+    "link" : "https://i.ebayimg.com/images/g/vdkAAOSwOfdZsZ~Y/s-l300.jpg",
+    "descripcion" : "un bicho muy raro",
+    "url" : "productos2.json"
+},{
+    "nombre" : "Peluche Flipazoo Delfin",
+    "precio" : 220,
+    "color" : "celeste",
+    "link" : "https://i5.walmartimages.ca/images/Large/022/158/999999-815824022158.jpg?odnBound=460",
+    "descripcion" : "un delfin que se convierte en morsa",
+    "url" : "productos2.json"
+},{
+    "nombre" : "Peluche Flipazoo Dragon Rojo",
+    "precio" : 360,
+    "color" : "rojo",
+    "link" : "https://i.pinimg.com/originals/5c/11/5a/5c115aad3dc13230edcfec222d8623e6.jpg",
+    "descripcion" : "un dragon rojo",
+    "url" : "productos2.json"
+}]
