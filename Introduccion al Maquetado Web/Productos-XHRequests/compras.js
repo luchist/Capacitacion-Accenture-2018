@@ -103,7 +103,7 @@ function ajax(m, dato, el) {
     });
     if (JSON.parse(xhr2.responseText)[0][a[m]] == dato) {
         el.style.backgroundColor = "green"
-        //load_elements()
+        //peticion_carga()
     } else {
         el.style.backgroundColor = "red"
     }
@@ -113,10 +113,74 @@ function ajax(m, dato, el) {
     xhr2.send()
 }
 
-function load_elements(productos){
+function doble_peticion_ajax(){
+    //let productos
+    //let contenedor = document.querySelector("#act")
+    console.log("Doble peticion ajax")
+    var xhr = new XMLHttpRequest()
+    xhr.open("GET","productos.json")
+    xhr.addEventListener("load",function(){
+        if (xhr.status == 200) {
+            console.log("xhr status 200")
+            productos = JSON.parse(xhr.responseText)
+            
+            let url = productos[1].url //la url de los objetos JSON
+
+            //Segunda Request
+            console.log("Segunda Request")
+
+            let xhr2 = new XMLHttpRequest()
+            console.log("Segunda Request - New")
+
+            xhr2.open("GET",url)
+            console.log("Segunda Request - GET url")
+
+            xhr2.addEventListener("load", function(){
+                console.log("Segunda Request - addEventListener")
+                if (xhr2.status == 200){
+
+                    console.log("Segunda Request - Status 200")
+
+                    let otrosProductos = JSON.parse(xhr2.responseText)
+                    console.log("Segunda Request - JSON Parse")
+
+                    carga_html(otrosProductos)
+                    console.log("Segunda Request - carga_html")
+                }
+                
+            })
+            xhr2.send() //envio la request 
+            console.log("Segunda Request - send()")
+
+            destruir_form()
+            carga_html(productos)
+            // document.querySelector("#cont").innerHTML=xhr.responseText
+            // console.log(JSON.parse(xhr.responseText)[0].clave)
+        }
+    })
+    xhr.send()
+}
+
+function peticion_carga(){
     console.log("VOY A REALIZAR UNA PETICION XMLHttpRequest de PRODUCTOS!")
     var xhr = new XMLHttpRequest()
     xhr.open("GET","productos.json")
+    xhr.addEventListener("load",function(){
+        if(xhr.status == 200){
+            // document.querySelector('#cont').innerHTML = xhr.responseText
+            console.log(JSON.parse(xhr.responseText)[0].nombre)
+            var productos = JSON.parse(xhr.responseText)
+            destruir_form()
+            carga_html(productos)
+        }
+    })
+    xhr.send()
+}
+
+function peticion_carga(url){
+    console.log("VOY A REALIZAR UNA PETICION XMLHttpRequest de PRODUCTOS!")
+    var xhr = new XMLHttpRequest()
+    xhr.open("GET",url)
     xhr.addEventListener("load",function(){
         if(xhr.status == 200){
             // document.querySelector('#cont').innerHTML = xhr.responseText
@@ -155,8 +219,10 @@ let form = document.getElementById('form')
 form.addEventListener("submit",function(e){
     e.preventDefault()
     console.log("Toque el boton!!!")
-    load_elements()
+    //peticion_carga()
+    doble_peticion_ajax()
 })
+
 
 /*
 function evento_user(usuarios){
