@@ -6,33 +6,33 @@
     #elefante{
         background-image: url('elefant.png');
         height: 100px;
-        width: 130px;
+        width: 140px;
         border-style: dashed;
         border-color: grey;
     }
     #soldado{
         background-image: url('soldier.jpg');
         height: 100px;
-        width: 150px;
+        width: 140px;
         border-style: dashed;
         border-color: green;
     }
     #tren{
         background-image: url('thomas2.jpg');
         height: 100px;
-        width: 150px;
+        width: 140px;
         border-style: dashed;
         border-color: purple;
     }
     #avion{
         background-image: url('plane-high.jpg');
         height: 100px;
-        width: 150px;
+        width: 140px;
         border-style: dashed;
         border-color: blue;
     }
     #arena{
-        height: 500px;
+        height: 400px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -44,7 +44,7 @@
 
     #arena div:hover{
         border-color: white;
-        border-style: groove;
+        border-style: hidden;
     }
     form{
         margin-bottom: 10px;
@@ -53,12 +53,24 @@
     form button{
         border-radius: 8px;
     }
+    body {
+        font-family: Consolas;
+        background-image: url('background.jpg');
+        background-repeat: no-repeat;
+    }
+    #consola{
+        color:green;
+        font-weight: bolder;
+        border-color: green;
+        border-style: groove;
+    }
 </style>
 </head>
 
 <body>
     
 <form>
+    SPAWN: <br>
     <button id="avion_btn"> AVION </button>
     <button id="tren_btn"> TREN </button>
     <button id="soldado_btn"> SOLDADO </button>
@@ -66,6 +78,10 @@
 </form>
 
 <div id="arena">
+    
+</div>
+
+<div id="consola">
     
 </div>
 
@@ -83,27 +99,51 @@ Maquinaria.prototype = new Ejercito()
 Organico.prototype = new Ejercito()
 
 function Avion(){
-    this.velocidad_maxima = 300
-    this.cargo = 200
+    this.velocidad_maxima = 300;
+    this.cargo = 200;
+    this.ver_datos = function(){
+        console.log("Imprimi un Avion!")
+        return("Velocidad Maxima: " + this.velocidad_maxima + ", " + "Capac. Carga: " + this.cargo + " Kg")
+    }
 }
 
 function Tren(){
-    this.velocidad_maxima = 90
-    this.cargo = 5000
+    this.velocidad_maxima = 90;
+    this.cargo = 5000;
+    this.ver_datos = function(){
+        console.log("Imprimi un Tren!")
+        return("Velocidad Maxima: " + this.velocidad_maxima + ", " + "Capac. Carga: " + this.cargo + " Kg")
+        //return("DATA DEL TREN")
+    }
 }
 
 function Soldado(){
     //this.nombre = nombre
-    this.velocidad_maxima = 30
-    this.municion = 200
-    this.cargo = 15
+    this.velocidad_maxima = 30;
+    this.municion = 200;
+    this.cargo = 15;
+    this.ver_datos = function(){
+        console.log("Imprimi un Soldado!")
+        return("Velocidad Maxima: " + this.velocidad_maxima + ", " + "Capac. Carga: " + this.cargo + " Kg, Municion: " + this.municion)
+    }
 }
 
 function Elefante(){
     //this.nombre = nombre
-    this.velocidad_maxima = 40
-    this.cargo = 50
+    this.velocidad_maxima = 40;
+    this.cargo = 50;
+    this.ver_datos = function(){
+        console.log("Imprimi un Elefante!")
+        return("Velocidad Maxima: " + this.velocidad_maxima + ", " + "Capac. Carga: " + this.cargo + " Kg")
+    }
 }
+
+//general para todos
+/*
+function ver_datos(obj){
+    //return ("Velocidad Maxima: " + obj.velocidad_maxima + "Km/H, " + "Capac. Carga: " + obj.cargo + " Kg.")
+    return ver_datos(obj)
+}*/
 
 function Maquinaria(){
     this.sentimientos = false
@@ -117,6 +157,9 @@ function Organico(){
 
 function Ejercito(){
     this.pais = "Argentina"
+     /*function ver_datos(){
+        //return ("Velocidad Maxima: " + this.velocidad_maxima + ", " + "Capac. Carga: " + this.cargo + " Kg")
+    }*/
 }
 
 //asigno los botones
@@ -127,43 +170,63 @@ var btn_soldado = document.querySelector('#soldado_btn')
 var btn_elefante = document.querySelector('#elefante_btn')
 
 var arena = document.querySelector('#arena')
+var consola = document.querySelector('#consola')
+
+var consola_counter = 0
 
 btn_avion.addEventListener ("click", function(e) {
     e.preventDefault()
     let a = new Avion
-    agregar_a_la_arena("avion")
+    agregar_a_la_arena("avion", a)
     console.dir(a)
 })
 
 btn_tren.addEventListener ("click", function(e) {
     e.preventDefault()
-    let a = new Tren()
-    agregar_a_la_arena("tren")
-    console.dir(a)
+    let t = new Tren()
+    agregar_a_la_arena("tren", t)
+    console.dir(t)
 })
 
 btn_soldado.addEventListener ("click", function(e) {
     e.preventDefault()
-    let a = new Soldado()
-    agregar_a_la_arena("soldado")
-    console.dir(a)
+    let s = new Soldado()
+    agregar_a_la_arena("soldado", s)
+    console.dir(s)
 })
 
 btn_elefante.addEventListener ("click", function(e) {
     e.preventDefault()
-    let a = new Elefante()
-    agregar_a_la_arena("elefante")
-    console.dir(a)
+    let ele = new Elefante()
+    agregar_a_la_arena("elefante", ele)
+    console.dir(ele)
 })
 
-function agregar_a_la_arena(string){
+function agregar_a_la_arena(string, obj){
     let contenedor = document.createElement("div")
     contenedor.setAttribute("id",string)
     arena.appendChild(contenedor)
+    agregar_a_la_consola(string, obj)
 }
 
 
+function agregar_a_la_consola(string, obj){
+    if(consola_counter < 8){
+        consola.innerText += "> El jugador invoco un " + string + " con " + obj.ver_datos() + "\n"
+        //console.dir(obj)
+        consola_counter++
+    }
+    else{
+        consola.innerText = ''
+        consola.innerText += "> El jugador invoco un " + string +'\n'
+        consola_counter = 0
+    }
+}
 
+/*
+function show(obj){
+    return obj.ver_datos
+}*/
 
 
 </script>

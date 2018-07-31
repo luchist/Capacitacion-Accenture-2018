@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<script>
+
+
+console.log(window.a)
+var obj = {}
+obj.a = 20
+console.log(obj.a)
+
+function constructora(n, e){
+    this.nombre = n
+    this.edad = e
+    this.accion = accion
+    accion() //ACA ESTA LLAMANDO A ACCION() DESDE WINDOW!
+    function accion(){
+        console.log(this)
+    }
+}
+
+var a = new constructora("Juan",20)
+console.log(a.nombre)
+
+var b = new constructora("Luis",56)
+var c = new constructora("Roberto Carlos",66)
+var d = new constructora("Miguel del Sel",99)
+var e = new constructora("Mariano Herbalife",69)
+
+function mostrar_persona(p){
+    console.log("Nombre:\t" + p.nombre + ".")
+    console.log("Edad:\t" + p.edad + ".")
+}
+
+/*
+console.dir(a)
+console.dir(b)
+console.dir(c)
+console.dir(d)
+*/
+
+mostrar_persona(a)
+mostrar_persona(b)
+mostrar_persona(c)
+mostrar_persona(d)
+mostrar_persona(e)
+
+</script>
+</html>
