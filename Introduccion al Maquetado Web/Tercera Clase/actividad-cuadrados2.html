@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Actividad - Cuadrados v2.0 </title>
+    <link rel="icon" type="image/png" href="https://vignette.wikia.nocookie.net/fantendo/images/f/fa/SSB_Pok%C3%A9mon_Classic.png/revision/latest?cb=20160327201140">
+    <style type="text/css">
+
+    @font-face {
+        font-family: "Pokemon GB";
+        src: url("Pokemon GB.ttf");
+    }
+
+    .bloquecontainer{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+        font-family: Consolas;
+        padding: 0 10%;
+    }
+
+    .bloque div{
+        border-style: dashed;
+        margin: 50px;
+    }
+
+    #pika{
+        width: 150px;
+        height: 150px;
+        background-color: #FAD61F;
+        color: #FD3B18;
+        font-weight: bolder;
+        margin: 50px;
+    }
+
+    #nido{
+        width: 150px;
+        height: 150px;
+        background-color: #98709A;
+        color: #2C6C67;
+        font-weight: bolder;
+        margin: 50px;
+        justify-content: center;
+    }
+
+    .body{
+        margin:0;
+    }
+
+    #console{
+        font-family: Pokemon GB;
+        font-size: 11px;
+        font-weight: bold;
+        color: #040603;
+        background-color: #C1C6C2;
+        width: 500px;
+        border-style: groove;
+        border-color: grey;
+    }
+
+    #consolapadre{
+        display: flex;
+        justify-content: center;
+    }
+
+    .transform{
+        margin: 20px;
+        -webkit-transition: color 3s; /* For Safari 3.0 to 6.0 */
+        transition: color 3s; /* For modern browsers */
+    }
+
+    .transform:hover{
+        color: violet;
+      font-family: Pokemon GB;
+      font-size: 14;
+      font-weight: bold;
+      font-display: block;
+        border-color: brightgreen;
+      border-style: dashed;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <header>
+        <div class="botones">
+            <button id="pika_btn">PIKACHU</button>
+            <button id="nido_btn">NIDORAN</button>
+        </div>
+        <div class="bloquecontainer">
+
+        </div>
+    </header>
+
+    <div id="consolapadre">
+
+        <div id="console">
+            Consola: <br>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script type="text/javascript" >
+
+/*
+var pikachubloque = document.getElementById("pikachu")
+var pikachuvida = 100;
+
+var nidoranbloque = document.getElementById("nidoran")
+var nidoranvida = 100;
+*/
+
+/*
+Version que utiliza constructores, se puede elegir el tipo del cuadrado
+*/
+
+
+//Constructores de Obj
+function Pikachu(){
+    this.vida = 100;
+    this.damage = 10;
+    this.nombre = "Pikachu";
+}
+
+function Nidoran(){
+    this.vida = 100;
+    this.damage = 10;
+    this.nombre = "Nidoran";
+}
+
+//creo las instancias
+let pika_inst = new Pikachu()
+let nido_inst = new Nidoran()
+
+/*
+Comportamiento de los botones
+*/
+
+let container = document.querySelector('.bloquecontainer')
+let consola = document.querySelector('#console')
+let btn_pika = document.querySelector('#pika_btn')
+let btn_nido = document.querySelector('#nido_btn')
+
+
+btn_pika.addEventListener ("click", function(e) {
+    e.preventDefault()
+    let p = new Pikachu()
+    let n = new Nidoran()
+    //En realidad tengo que crear todos los obj
+    agregar_al_container("pika", "nido", p, n)
+    console.dir(p)
+    console.dir(n)
+})
+
+btn_nido.addEventListener ("click", function(e) {
+    e.preventDefault()
+    let n = new Nidoran()
+    let p = new Pikachu()
+    agregar_al_container("nido","pika", n, p)
+    console.dir(n)
+    console.dir(p)
+})
+
+function agregar_al_container(string, string2, obj, obj2){
+    let contenedor_nuevo = document.createElement("div")
+    contenedor_nuevo.setAttribute("id",string)
+    contenedor_nuevo.classList.add("transform")
+    contenedor_nuevo.innerText = obj.nombre
+
+    let otro_container = document.createElement("div")
+    otro_container.setAttribute("id",string2)
+    otro_container.classList.add("transform")
+    otro_container.innerText = obj2.nombre
+
+    //accion click del contenedor_nuevo
+    contenedor_nuevo.addEventListener("click",function(){
+        pegar(obj, obj2, otro_container, contenedor_nuevo)
+    })
+    container.appendChild(contenedor_nuevo)
+    container.appendChild(otro_container)
+    consola_log(obj.nombre + " yo te elijo!!!")
+}
+
+function pegar(obj, obj2, elemento, otro_elemento){
+    //aviso por consola del navegador
+    console.log(obj.nombre + ' uso placaje!')
+    //informo por consola del juego
+    consola_log(obj.nombre + ' uso placaje')
+    consola_log(obj.nombre + ' le hizo ' + obj.damage + ' de daño a ' + obj2.nombre)
+
+    obj2.vida -= obj.damage
+    elemento.innerText = obj2.vida      //le baja la vida al otro
+
+    //color
+    /*
+    personaje2[4] -= 0.1 //opacidad
+    coloreable.style.backgroundColor = "rgb("+ personaje2[3] + ", " + personaje2[4] + ")" //color
+    console.log("rgb("+ personaje2[3] + ", " + personaje2[4] + ")")*/
+
+    if(obj2.vida <= 0){
+        //cambio el innertext
+        elemento.innerText = "TA MORIDO"
+        //aviso por consola de navegador
+        console.log(obj2.nombre + ' está fuera de combate!!')
+        //informo por consola del juego
+        consola_log(obj2.nombre + ' enemigo se debilito')
+        consola_log(obj.nombre + ' ganó 25 puntos EXP.')
+        //elemento.removeEventListener("click",null)
+        otro_elemento.removeEventListener("click",pegar)
+        //elemento.onclick = null
+        otro_elemento.onclick = null
+        console.log("TRATE DE PONERLOS EN NULLLL!!!")
+    }
+}
+
+function consola_log(string){
+    consola.innerText += '¡' + string + '!\n\n' //mejor espaciado entre oraciones
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+//muestro el string por la consola del juego, agregando ¡! y doble enter al final
+
+
+</script>
