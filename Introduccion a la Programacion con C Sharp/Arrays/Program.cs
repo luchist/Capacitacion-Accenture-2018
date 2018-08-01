@@ -157,15 +157,18 @@ namespace Arrays
             }
 
             //pregunto si maximo != minimo
+            const int TOPE = 99;
             if (max != TOPE && min != TOPE)
             {
                 Console.WriteLine("El maximo numero ingresado fue: " + max);
                 Console.WriteLine("El minimo numero ingresado fue: " + min);
                 Console.WriteLine("+--------------------------------------+");
+                Console.ReadKey();
             }
             else
             {
                 Console.WriteLine("No se ingresaron valores");
+                Console.ReadKey();
             }
         }
     }
