@@ -9,6 +9,7 @@
         width: 140px;
         border-style: dashed;
         border-color: grey;
+        border-radius: 8px;
     }
     #soldado{
         background-image: url('soldier.jpg');
@@ -16,6 +17,7 @@
         width: 140px;
         border-style: dashed;
         border-color: green;
+        border-radius: 8px;
     }
     #tren{
         background-image: url('thomas2.jpg');
@@ -23,6 +25,7 @@
         width: 140px;
         border-style: dashed;
         border-color: purple;
+        border-radius: 8px;
     }
     #avion{
         background-image: url('plane-high.jpg');
@@ -30,6 +33,7 @@
         width: 140px;
         border-style: dashed;
         border-color: blue;
+        border-radius: 8px;
     }
     #arena{
         height: 400px;
@@ -40,6 +44,7 @@
         border-color: red;
         font-family: Consolas;
         color: white;
+        border-radius: 8px;
     }
 
     #arena div:hover{
@@ -60,15 +65,19 @@
     }
     #consola{
         color:green;
+        font-family: Consolas;
+        font-size: 12px;
         font-weight: bolder;
+        background-color: rgba(0,0,0,0.75);
         border-color: green;
         border-style: groove;
+        border-radius: 8px;
     }
 </style>
 </head>
 
 <body>
-    
+
 <form>
     SPAWN: <br>
     <button id="avion_btn"> AVION </button>
@@ -78,11 +87,11 @@
 </form>
 
 <div id="arena">
-    
+
 </div>
 
 <div id="consola">
-    
+
 </div>
 
 </body>
@@ -211,7 +220,8 @@ function agregar_a_la_arena(string, obj){
 
 
 function agregar_a_la_consola(string, obj){
-    if(consola_counter < 8){
+    let MAX_NUM = 12
+    if(consola_counter < MAX_NUM){
         consola.innerText += "> El jugador invoco un " + string + " con " + obj.ver_datos() + "\n"
         //console.dir(obj)
         consola_counter++
