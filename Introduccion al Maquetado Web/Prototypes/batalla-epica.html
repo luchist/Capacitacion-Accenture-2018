@@ -43,14 +43,23 @@
         border-style: groove;
         border-color: red;
         font-family: Consolas;
-        color: white;
         border-radius: 8px;
     }
 
+    #arena div{
+        font-weight: bolder;
+        color: red;
+        text-align: center;
+        opacity: 0.5;
+    }
+
+    /*
     #arena div:hover{
         border-color: white;
         border-style: hidden;
     }
+    */
+
     form{
         margin-bottom: 10px;
         margin-left: 10px;
@@ -214,6 +223,17 @@ btn_elefante.addEventListener ("click", function(e) {
 function agregar_a_la_arena(string, obj){
     let contenedor = document.createElement("div")
     contenedor.setAttribute("id",string)
+    //mouse over y mose out
+    contenedor.addEventListener("mouseover",function(e){
+        e.preventDefault
+        console.log("hice mouse over sobre un div generado por js")
+        contenedor.innerText = "HP : 100"
+    })
+    contenedor.addEventListener("mouseout",function(e){
+        e.preventDefault
+        console.log("hice mouse out sobre un div generado por js")
+        contenedor.innerText = ""
+    })
     arena.appendChild(contenedor)
     agregar_a_la_consola(string, obj)
 }
